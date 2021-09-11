@@ -1,0 +1,30 @@
+HTTrack3.49-2+htsswf+htsjava launched on Fri, 10 Sep 2021 22:35:27 at https://voices.uchicago.edu/ignite +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qir2%e3C2t%Ps0u1%uN2%I0p3BaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://voices.uchicago.edu/ignite -O1 "C:\My Web Sites\Ignite Website" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+22:35:36	Error: 	"Forbidden" (403) at link https://voices.uchicago.edu/ignite/xmlrpc.php (from https://voices.uchicago.edu/ignite/)
+22:35:47	Error: 	"Forbidden" (403) at link https://voices.uchicago.edu/ignite/xmlrpc.php?rsd (from https://voices.uchicago.edu/ignite/)
+22:35:47	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/POST (from https://voices.uchicago.edu/ignite/)
+22:35:47	Error: 	"Bad Request" (400) at link https://voices.uchicago.edu/ignite/wp-admin/admin-ajax.php (from https://voices.uchicago.edu/ignite/)
+22:35:47	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/files/2021/01/cropped-IGNITE-icon-32x32.png (from https://voices.uchicago.edu/ignite/)
+22:35:47	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/files/2021/01/cropped-IGNITE-icon-180x180.png (from https://voices.uchicago.edu/ignite/)
+22:35:48	Warning: 	Retry after error -4 (No data (connection closed)) at link https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/e/2936/files/2021/01/IGNITE-icon.png (from https://voices.uchicago.edu/ignite/)
+22:35:49	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/wp-content/themes/divi/includes/builder/frontend-builder/build/frontend-builder-scripts.js?ver=4.9.6 (from https://voices.uchicago.edu/ignite/)
+22:35:50	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/wp-content/themes/divi/includes/builder/scripts/ext/jquery.magnific-popup.js?ver=4.9.6 (from https://voices.uchicago.edu/ignite/)
+22:35:50	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/wp-content/themes/divi/core/admin/js/common.js?ver=4.9.6 (from https://voices.uchicago.edu/ignite/)
+22:35:51	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/POST (from https://voices.uchicago.edu/ignite/)
+22:35:51	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/files/2021/01/cropped-IGNITE-icon-32x32.png (from https://voices.uchicago.edu/ignite/)
+22:35:51	Warning: 	Found for https://voices.uchicago.edu/ignite/files/2021/01/cropped-IGNITE-icon-180x180.png
+22:35:51	Warning: 	File has moved from https://voices.uchicago.edu/ignite/files/2021/01/cropped-IGNITE-icon-180x180.png to https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/e/2936/files/2021/01/cropped-IGNITE-icon-180x180.png
+22:35:51	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/wp-content/themes/divi/includes/builder/frontend-builder/build/frontend-builder-scripts.js?ver=4.9.6 (from https://voices.uchicago.edu/ignite/)
+22:35:51	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/wp-content/themes/divi/core/admin/js/common.js?ver=4.9.6 (from https://voices.uchicago.edu/ignite/)
+22:35:54	Error: 	"Not Found" (404) at link https://voices.uchicago.edu/ignite/POST (from https://voices.uchicago.edu/ignite/)
+22:35:54	Warning: 	Found for https://voices.uchicago.edu/ignite/files/2021/01/cropped-IGNITE-icon-32x32.png
+22:35:54	Warning: 	File has moved from https://voices.uchicago.edu/ignite/files/2021/01/cropped-IGNITE-icon-32x32.png to https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/e/2936/files/2021/01/cropped-IGNITE-icon-32x32.png
+
+HTTrack Website Copier/3.49-2 mirror complete in 27 seconds : 63 links scanned, 46 files written (3553635 bytes overall), 10 files updated [280078 bytes received at 10373 bytes/sec], 439102 bytes transferred using HTTP compression in 10 files, ratio 22%, 2.6 requests per connection
+(4 errors, 15 warnings, 0 messages)

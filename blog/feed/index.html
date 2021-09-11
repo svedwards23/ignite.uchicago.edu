@@ -1,0 +1,915 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>WebAIM Blog</title>
+	<atom:link href="https://webaim.org/blog/feed/" rel="self" type="application/rss+xml" />
+	<link>https://webaim.org/blog</link>
+	<description>The WebAIM Web Accessibility Blog</description>
+	<lastBuildDate>Thu, 19 Aug 2021 21:49:31 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.1</generator>
+	<item>
+		<title>Google Announces Seismic Change to Docs</title>
+		<link>https://webaim.org/blog/seismic-change-to-docs/</link>
+					<comments>https://webaim.org/blog/seismic-change-to-docs/#comments</comments>
+		
+		<dc:creator><![CDATA[George Joeckel]]></dc:creator>
+		<pubDate>Thu, 19 Aug 2021 21:46:38 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://webaim.org/blog/?p=2434</guid>
+
+					<description><![CDATA[A May 11 announcement on Google Workspace Updates appears to abandon the current model of support for assistive technologies: Over the course of the next several months, we’ll be migrating the underlying technical implementation of Docs from the current HTML-based rendering approach to a canvas-based approach to improve performance and improve consistency in how content [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>A May 11 announcement on <a href="https://workspaceupdates.googleblog.com/2021/05/Google-Docs-Canvas-Based-Rendering-Update.html">Google Workspace Updates</a> appears to abandon the current model of support for assistive technologies:</p>
+
+
+
+<blockquote class="wp-block-quote"><p>Over the course of the next several months, we’ll be migrating the underlying technical implementation of Docs from the current HTML-based rendering approach to a canvas-based approach to improve performance and improve consistency in how content appears across different platforms.<br></p></blockquote>
+
+
+
+<div class="wp-block-image is-style-default"><figure class="alignright size-full is-resized"><a href="https://webaim.org/blog/wp-content/uploads/2021/08/titleFix.png"><img loading="lazy" style="float: right; padding: 1.5em;" src="https://webaim.org/blog/wp-content/uploads/2021/08/titleFix.png" alt="Screenshot of the Accessibility settings dialog." class="wp-image-2456" width="357" height="311" srcset="https://webaim.org/blog/wp-content/uploads/2021/08/titleFix.png 476w, https://webaim.org/blog/wp-content/uploads/2021/08/titleFix-300x262.png 300w" sizes="(max-width: 357px) 100vw, 357px" /></a></figure></div>
+
+
+
+<p>Google Docs and the other tools in the <a href="https://workspace.google.com/">Google Workspace</a> (formerly G Suite) are used by <a href="https://www.businessinsider.com/google-g-suite-gmail-2-billion-vs-microsoft-office-2020-3">more than 2 billion active users each month</a>. And while there is certainly room for improvement, the current <a href="https://support.google.com/docs/answer/6282736?hl=en&amp;ref_topic=6039805">accessibility support for Docs editors</a> is notable. After enabling the Accessibility settings, Docs supports screen readers (ChromeVox, NVDA, JAWS, and VoiceOver), braille displays, and screen magnifiers.</p>
+
+
+
+<h2>Goodbye DOM?</h2>
+
+
+
+<p>In his article <a href="https://thenewstack.io/google-docs-switches-to-canvas-rendering-sidelining-the-dom/">Google Docs Switches to Canvas Rendering, Sidelining the DOM</a>, Richard MacManus summarizes the current model for accessibility in Docs, and how it would change:</p>
+
+
+
+<blockquote class="wp-block-quote"><p>Up till now, Google Docs had evolved over the past fifteen years in the familiar pattern of most web applications: its interactivity largely achieved by heavy use of JavaScript code to manipulate the DOM…. The appeal of Canvas is that it enables the developers of Google Docs to bypass all of that persnickety DOM wrangling and just ‘paint’ the document onto the page.</p></blockquote>
+
+
+
+<p>In the future this approach may offer some advantages over the current model, such as faster document loading and cross-browser and cross-device compatibility. But today, Google Doc’s tens of millions of assistive technologies users rely on the semantic underlay that the <a href="https://www.w3.org/TR/DOM-Level-2-HTML/">Document Object Model (DOM)</a> provides. Although the path forward is not addressed in the announcement, there have been discussions of leveraging a “side” or “hidden” DOM through the <a href="https://github.com/WICG/aom/blob/gh-pages/explainer.md">Accessibility Object Model (AOM</a>).<br></p>
+
+
+
+<h2>Accessibility Community Feedback</h2>
+
+
+
+<p>As one might imagine, word of this initiative spread quickly among the members of Google’s Accessibility Group, as seen by some of the comments* in the post <a href="https://groups.google.com/g/accessible/c/y8HWwHILKDc/m/lseRX1syAAAJ">“Please Consider What it Means Switching to Google Docs to Use Canvas”</a> (group subscription required):</p>
+
+
+
+<blockquote class="wp-block-quote"><p>I think if we are expected to use a separate but not equal interface, blind people will stop using Docs…</p></blockquote>
+
+
+
+<blockquote class="wp-block-quote"><p>Please realize that individuals read, write, and interact differently with content––regardless of a shared label––and require support based on individual needs and preferences…. That I must use your stuff before I can get in the door is not being accessible.</p></blockquote>
+
+
+
+<blockquote class="wp-block-quote"><p>Google influences the wider community of developers very strongly. Since the text editor tool underlying Google Docs is not open-source, other developers will start attempting to copy the Google Docs experience and forget screen reader accessibility….</p></blockquote>
+
+
+
+<p>In addition to these concerns, some commenters experienced poor results when trying to access a Google Doc example demonstrating canvas-based rendering:</p>
+
+
+
+<blockquote class="wp-block-quote"><p>Is this in another language? I could not make heads or tails out of it, although the headings were in English.</p></blockquote>
+
+
+
+<blockquote class="wp-block-quote"><p>At this point accessibility should be working even in alpha testing.&nbsp; It should be part of the bedrock of a design—especially at companies like Google.&nbsp; It shouldn’t be done after the fact.&nbsp;</p></blockquote>
+
+
+
+<p>There were also AT users that saw the change as part of a series of evolutions in web accessibility:</p>
+
+
+
+<blockquote class="wp-block-quote"><p>When the Windows (small w windows that is) style of UI came out, it was initially more challenging than a DOS/Terminal environment for blind users.&nbsp; It took some work to develop proper accessibility for us.&nbsp; Its second nature now for most blind users to be able to navigate within a windows style of UI.<br><br>When touch-screen devices were introduced, it was impossible for totally blind users to use them effectively.&nbsp; Some ingenious people came up with an idea and we now have smartphones and tablets perfectly accessible to us as blind users.&nbsp; The learning curve was steeper for some compared to others, but these devices are, for the most part, comfortable to use for blind users.</p></blockquote>
+
+
+
+<p>*Some user comments have been lightly edited to increase their readability.</p>
+
+
+
+<p>On May 25th, the <a href="https://support.google.com/accessibility/?hl=en#topic=9071908">Google Disability Team</a> posted this response:<br></p>
+
+
+
+<blockquote class="wp-block-quote"><p>Thanks for sharing your concerns and feedback with us. The Google Docs accessibility and product teams are working to ensure continued assistive technology support, and this update will build a foundation upon which the Docs team can introduce additional accessibility improvements.<br><br>Compatibility with supported assistive technologies, including screen readers, braille devices, and screen magnification, will not change with canvas-based Docs&#8230;.</p></blockquote>
+
+
+
+<h2>Take Two</h2>
+
+
+
+<p>On May 26 Google posted an update to the announcement:<br></p>
+
+
+
+<blockquote class="wp-block-quote"><p>We’ve updated the &#8220;Additional details&#8221; section of this post with more information on Google Docs accessibility features and support. Please see below for more information.<br></p></blockquote>
+
+
+
+<p>The added section reads:</p>
+
+
+
+<blockquote class="wp-block-quote"><p>Compatibility for supported <a href="https://support.google.com/docs/answer/6282736?hl=en&amp;ref_topic=6039805">assistive technologies</a> such as screen readers, braille devices, and screen magnification features, will not be impacted by the canvas-based rendering change. We will continue to ensure assistive technology is supported, and work on additional accessibility improvements enabled by canvas-based rendering.</p></blockquote>
+
+
+
+<p>One might be tempted to summarize the subtext of this update as &#8220;Hey assistive technology users, sorry we failed to anticipate and address the concerns that you may have had from this announcement. In response to these concerns we want to let you know: &#8216;We&#8217;ve got this.'&#8221; </p>
+
+
+
+<p>Some time after May 11, the original canvas-based example document was replaced with an <a href="https://docs.google.com/document/d/1vUnn0ePU-ynArE1OdxyEHXR2G0sl74ja_st_4OOzlgE/preview">updated version</a>. Our testing revealed only rudimentary assistive technology support, and led us to conclude that significant improvements will need to be made to Docs before support for assistive technologies &#8220;&#8230;will not be impacted by the canvas-based rendering change&#8221;.</p>
+
+
+
+<h2>Google Pumps the Brakes</h2>
+
+
+
+<p>Google&#8217;s stated timeline of &#8220;over the next several months&#8221; for the &#8220;underlying technical implementation&#8221; appears to have been a significant factor in many of the concerns that have been expressed by Google Docs assistive technology users and developers. As of August 18, a search through the listings in both the <strong>What’s new in Google Workspace (recent releases) </strong>and <strong>Upcoming Google Workspace releases </strong>pages did not return any information on canvas rendering in Google Docs. At this time, we have not been able to locate any subsequent updates to the timeline for implementation.</p>
+
+
+
+<h2>Support for Docs Accessibility is Critical</h2>
+
+
+
+<p>The Google Disability Awareness team has an ongoing responsibility to assistive technology users and developers that transcends writing compatible code. When a major technological shift threatens to limit, and possibly eliminate,   access for these users and developers, the scope of this responsibility is even greater. We hope moving forward that Google will include clear, detailed, and consistent communication as part of its commitment to maintain the same level of assistive technology support present in the HTML-rendered version of Docs.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://webaim.org/blog/seismic-change-to-docs/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Colorado Mandates Accessibility for State and Local Government Websites</title>
+		<link>https://webaim.org/blog/colorado-mandates-accessibility/</link>
+					<comments>https://webaim.org/blog/colorado-mandates-accessibility/#respond</comments>
+		
+		<dc:creator><![CDATA[John Northup]]></dc:creator>
+		<pubDate>Thu, 29 Jul 2021 20:58:06 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://webaim.org/blog/?p=2425</guid>
+
+					<description><![CDATA[Colorado House Bill 1110 (PDF), signed by Governor Polis on June 30, mandates that state and local government websites adhere to the &#8220;most recent&#8221; version of WCAG by July 1, 2024—and appropriates $312,922 to support conformance efforts during fiscal year 2021-22. Under the bill, individuals with disabilities who suffer discrimination by a non-conformant website may [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p><a href="https://legiscan.com/CO/text/HB1110/id/2417119/Colorado-2021-HB1110-Enrolled.pdf">Colorado House Bill 1110 (PDF)</a>, signed by Governor Polis on June 30, mandates that state and local government websites adhere to the &#8220;most recent&#8221; version of WCAG by July 1, 2024—and appropriates $312,922 to support conformance efforts during fiscal year 2021-22.</p>
+
+
+
+<p>Under the bill, individuals with disabilities who suffer discrimination by a non-conformant website may bring a civil suit and, if successful, receive $3,500 per violation, per plaintiff.</p>
+
+
+
+<p>Borrowing from the <a href="https://www.w3.org/WAI/WCAG21/quickref/">Web Content Accessibility Guidelines (WCAG)</a> principles, the bill defines &#8220;accessible&#8221; as, &#8220;perceivable, operable, and understandable digital content that enables an individual with a disability to access the same information, engage in the same interactions, and enjoy the same services offered to other individuals, with the same privacy, independence, and ease of use as exists for individuals without a disability.&#8221;</p>
+
+
+
+<p>Here at WebAIM, we applaud both the mandate and its funding! Now that monies are available, though, the question will arise as to how to best invest them. The bill text merely provides that:</p>
+
+
+
+<blockquote class="wp-block-quote"><p><em>For the 2021-22 state fiscal year, $312,922 is appropriated to the office of the governor for use by the office of information technology. This appropriation is from the general fund and is based on an assumption that the office will require an additional 0.9 FTE. To implement this act, the office may use this appropriation for enterprise solutions.</em></p></blockquote>
+
+
+
+<p>Simply distributing these funds equally among Colorado&#8217;s <a href="https://www.colorado.gov/state-agencies-panel">22 state agencies</a> and <a href="https://en.wikipedia.org/wiki/List_of_municipalities_in_Colorado">334 local government entities</a> (municipalities and counties) would come out to about $879 each—not enough even to fund one work week of a web developer&#8217;s bug-patching time. Slicing the pie this thin wouldn&#8217;t give anyone a satisfying mouthful. If the &#8220;enterprise solution&#8221; being contemplated is just an automated reporting tool, this would also be an incomplete solution—although it would help identify problems, it would not build expertise among those charged with fixing those problems.</p>
+
+
+
+<p>Merely funding a bug-patching exercise or a statewide accessibility audit misses the point. If we patch it today, we&#8217;re likely to create the same barriers tomorrow, unless we understand <em>why </em>we patched it today. So, instead of thinking of it as bug-patching, WebAIM believes that it would be beneficial to use some of these funds to support large group training seminars. This way, stakeholders can learn how to build and maintain websites that are in harmony with WCAG, and better appreciate the online experiences of their citizens who have disabilities. This will empower them to not only remediate today&#8217;s problems but avoid them in the future.</p>
+
+
+
+<p>Perhaps these large-scale training events could be hosted by the various &#8220;Council of Governments&#8221; organizations peppered around the state (<a href="https://drcog.org/">DRCOG</a>, <a href="https://www.nwccog.org/">NWCCOG</a>, <a href="https://ppacg.org/">PPACG</a>, <a href="https://sccog.colorado.gov/">SCCOG</a>, <a href="http://www.swccog.org/">SWCCOG</a>, etc.), with each of their constituent governments sending a representative to learn and absorb. This person could then return home as the newly minted accessibility expert on their team, sharing that knowledge further.</p>
+
+
+
+<p>We are glad to see Colorado taking this meaningful step forward and look forward to seeing their progress!</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://webaim.org/blog/colorado-mandates-accessibility/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Evaluating Color and Contrast &#8211; How hard can it be?</title>
+		<link>https://webaim.org/blog/contrast-how-hard-can-it-be/</link>
+					<comments>https://webaim.org/blog/contrast-how-hard-can-it-be/#comments</comments>
+		
+		<dc:creator><![CDATA[Jon Whiting]]></dc:creator>
+		<pubDate>Fri, 02 Jul 2021 19:14:09 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://webaim.org/blog/?p=2407</guid>
+
+					<description><![CDATA[Testing contrast and use of color is one of the most deceptively difficult tasks in a web accessibility evaluation. Consider this screenshot of a checkbox as an example: This simple checkbox and label text require at least 15 checks to test conformance with WCAG requirements for contrast and color use. Text Contrast WCAG 1.4.3 requires [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Testing contrast and use of color is one of the most  deceptively difficult tasks in a web accessibility evaluation. Consider this screenshot  of a checkbox as an example:</p>
+<p><img loading="lazy" src="https://webaim.org/blog/media/checkbox-contrast.png" alt="Custom checkbox with a gray border. The checkbox's label is 'I agree to the Terms of Use'. 'Terms of Use' is a link with no underline." class="border center" width="650" height="118"></p>
+<p>This simple checkbox and label text require at least 15 checks  to test conformance with WCAG requirements for contrast and color use.</p>
+<h2>Text Contrast</h2>
+<p>WCAG 1.4.3 requires at least 4.5:1 contrast between this  text label and its background (assuming the text is not &#8220;Large  Text&#8221;). That requires measuring contrast of both the dark grey text label  and the blue link to their grey background. Because this is true text  with a solid background color, <a href="https://wave.webaim.org">WAVE</a> will  identify any contrast errors in this text automatically. You could also test  this with several other tools including <a href="https://webaim.org/resources/contrastchecker/">WebAIM&#8217;s contrast checker</a> and <a href="https://webaim.org/articles/contrast/devtools">Chrome DevTools</a>.</p>
+<h2>Checkbox Contrast</h2>
+<p>A default checkbox will provide sufficient contrast and does  not require additional contrast testing, but because this example includes a  customized checkbox, WCAG 1.4.11 requires 3:1 contrast between the checkbox and  the background. If a checkbox is customized using CSS, it may be possible to  find its defined colors in the page&#8217;s styles using a browser inspection tool.  If the checkbox is made up of an image (or multiple images for different  states), you will need to use an eyedropper tool like <a href="https://webaim.org/articles/contrast/evaluating#colorzilla">ColorZilla</a>, <a href="https://webaim.org/articles/contrast/evaluating#cca">Colour Contrast  Analyser</a>, or the eyedropper in DevTools or WAVE to extract the image color  values.</p>
+<h2>Links that rely on color</h2>
+<p>The underline has been removed from the &#8220;Terms of Use&#8221; link. Because a text color difference is used to distinguish the link  from the rest of the label, WCAG 1.4.1 adds two requirements that you must also  check:</p>
+<ul>
+<li>There must be at least 3:1 contrast between the body  text color and link text color. This is in addition to the 4.5:1 contrast  requirement of the text with the background. Our <a href="https://webaim.org/resources/linkcontrastchecker/">link contrast checker</a> allows you to check the conformance of all three combinations of colors and, if  necessary, identify colors that will meet these requirements. With certain  color combinations, such as a light grey background, it may be difficult or  impossible to meet all these contrast requirements.</li>
+<li>The link must have a non-color cue (usually the  introduction of underline) with at least 3:1 on keyboard focus.</li>
+</ul>
+<p>We also recommend checking for a similar cue on mouse hover,  but strictly speaking, this is not a WCAG requirement.</p>
+<h2>Checkbox and Link States</h2>
+<p>Beyond the default state, you must also check the contrast  of the link text and the checkbox in other possible states. The link must have  at least 4.5:1 contrast to the background in the mouse hover, keyboard focus,  active, and visited states. The checkbox must have at least 3:1 contrast in the  mouse hover, keyboard focus, active, and checked states.</p>
+<p>The white checkmark must also have at least 3:1 contrast  with the dark grey checkbox color.</p>
+<p><img loading="lazy" src="https://webaim.org/blog/media/checkbox-contrast-checked.png" alt="Checkbox in a checked state" class="border center" width="650" height="118"></p>
+<h2>Keyboard Focus Indicators</h2>
+<p>There are currently three WCAG success criteria that relate to the visible indication that an element has keyboard focus:</p>
+<ul>
+<li>2.4.7 Focus Visible (Level AA) requires a  visible indication that an element has keyboard focus.</li>
+<li>1.4.1 Use of Color (Level A) states that this indication  cannot be just a subtle change in color.</li>
+<li>1.4.11 Non-text Contrast (Level AA) requires 3:1 contrast for  graphical objects and user interface components.</li>
+</ul>
+<p>There is some interplay between these three requirements,  but the takeaway is that interactive elements must have a visual  cue of keyboard focus with at least 3:1 contrast. This could be a color change  that has at least 3:1 contrast with a default state, like changing the color of  the checkbox border. However, an outline with at least 3:1 contrast is usually  best. Most modern browsers will, by default, provide conformant outlines.  However, if you customize the outline colors, you must ensure that it provides  at least 3:1 contrast.</p>
+<h2>The Grand Total</h2>
+<p>For WCAG conformance, this simple example requires:</p>
+<p><strong>At least 4.5:1 contrast:</strong></p>
+<ol>
+<li>Label text</li>
+<li>Link text</li>
+<li>Link text – mouse hover</li>
+<li>Link text – keyboard focus</li>
+<li>Link text – active</li>
+<li>Link text – visited</li>
+</ol>
+<p><strong>At least 3:1 contrast: </strong></p>
+<ol start="7">
+<li>Between label text and link text</li>
+<li>Visual cue when the link has keyboard focus</li>
+<li>Visual cue that the checkbox has keyboard focus</li>
+<li>Checkbox border – default</li>
+<li>Checkbox border – mouse hover</li>
+<li>Checkbox border – keyboard focus</li>
+<li>Checkbox border – active</li>
+<li>Checkbox border – checked</li>
+<li>The checkmark indicating the checkbox is checked.</li>
+</ol>
+<p>This doesn&#8217;t include possible  color and contrast issues related to error states or feedback, so 15 is the  lowest number of checks required.</p>
+<h2>Browser Defaults are Usually Best</h2>
+<p>For simplicity and optimal accessibility,  it is recommended to stick to default form controls and focus outlines, and to  not remove the underline from links that appear within text. If this example followed these  three principles your testing effort goes down considerably. You would only  need to verify 4.5:1 contrast of:</p>
+<ol>
+<li>Label text</li>
+<li>Link text</li>
+<li>Link text – mouse hover</li>
+<li>Link text – keyboard focus</li>
+<li>Link text – active</li>
+<li>Link text – visited</li>
+</ol>
+<p>While this is the ideal, the  reality is that many sites are closer to the original example. That is why  color and contrast testing will continue to be deceptively difficult.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://webaim.org/blog/contrast-how-hard-can-it-be/feed/</wfw:commentRss>
+			<slash:comments>9</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Show Up to Disrupt</title>
+		<link>https://webaim.org/blog/show-up-to-disrupt/</link>
+					<comments>https://webaim.org/blog/show-up-to-disrupt/#comments</comments>
+		
+		<dc:creator><![CDATA[Cyndi Rowland]]></dc:creator>
+		<pubDate>Fri, 28 May 2021 14:53:29 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://webaim.org/blog/?p=2399</guid>
+
+					<description><![CDATA[Last week many of us participated in Global Accessibility Awareness Day (GAAD). On that day, I had the privilege to listen to a keynote address by Judy Heumann during Knowbility’s virtual AccessU. Some may know Ms. Heumann from leadership positions in the U.S. Dept of Education, the World Bank, or the U.S. State Department. Others [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>Last week many of us participated in <a href="https://globalaccessibilityawarenessday.org/">Global Accessibility Awareness Day (GAAD)</a>. On that day, I had the privilege to listen to a keynote address by <a href="https://en.wikipedia.org/wiki/Judith_Heumann">Judy Heumann</a> during Knowbility’s virtual <a href="https://knowbility.org/programs/accessu-2021">AccessU</a>. Some may know Ms. Heumann from leadership positions in the U.S. Dept of Education, the World Bank, or the U.S. State Department. Others would know her as a lifelong civil rights activist in the disability movement, or as an internationally-awarded and Oscar nominated contributor to the Netflix documentary <a href="https://www.netflix.com/title/81001496">Crip Camp</a> (this is a must see IMHO).</p>
+
+
+
+<p>I’m both energized and haunted by her keynote. She recounted lessons from the disability movement of the past and efforts to secure a more accessible present and future. While the entirety of her speech was amazing, there is one concept I can’t seem to get out of my head. Ms. Heumann reminded us all that if we want to change the status quo we must <strong>“show up to disrupt”</strong>.</p>
+
+
+
+<p>She shared this phrase in the context of her lifelong civil rights activism. Ms. Heumann recounted a tremendous disappointment when, after years of disability activists working within the system to bring about policy changes, the Nixon Administration and Congress rejected the proposal to define disability as a protected class under federal law. This giant blow caused a powerful response. It resulted in civil disobedience actions that subsequently framed the disability movement and civil rights legislation for those with disabilities in the U.S.</p>
+
+
+
+<p><img src="https://webaim.org/blog/media/sitin.jpg" alt="Photo of protesters for Section 504" style="width:98%" /></p>
+
+
+
+<p>Some of you will recall the mid 70’s and 80’s where individuals in wheelchairs chained themselves to, or surrounded, busses to protest inaccessible transportation. Law enforcement may have been familiar with clearing away protestors, but moving people in chairs was difficult. Moreover, paddy wagons and jails were not accessible either, so there were few places to move them to. Before buildings were required to be accessible, individuals disrupted the status quo by crawling up steps and staircases to state and federal buildings to speak with legislators and participate in our democracy. Then there was the longest non-violent occupation of a federal building in the history of the U.S. <a href="https://www.atlasobscura.com/articles/504-sit-in-san-francisco-1977-disability-rights-advocacy">The 504 Sit-In</a> helped change the status, in law, of those with disabilities. Of course, the rest is history. The passage of Section 504 in the Rehabilitation Act became the first federal nondiscrimination provision for persons with disabilities. 13 years later, the Americans with Disabilities Act was signed into law.</p>
+
+
+
+<p>Nobody can know the direct effect that these acts of civil disobedience had on the passage of nondiscrimination laws, but in my opinion, the disability community would remain unprotected were it not for these bold actions by bold people to “show up to disrupt” the status quo.</p>
+
+
+
+<p>Let’s now take that lesson and focus on digital spaces. Like the 70’s and 80’s push to make the built environment accessible as key to inclusion, we have had decades of work on digital accessibility. So how are our outcomes? Certainly, there are some improvements. Certainly, technology has made a difference. Certainly, more people are aware, more have received training than ever before, and more developers and designers apply accessibility in what they do. Certainly, more and more entities make commitments for accessibility. Certainly, court decisions have shaped our work. Yet as the web grows logarithmically and our society increasingly relies on digital goods and services, are we keeping up? The results of the <a href="https://webaim.org/projects/million/">WebAIM Million</a> attest to the snail&#8217;s pace of progress broadly. When the Department of Justice halted efforts under the Trump Administration to create a federal definition of digital accessibility, many of us felt disappointment and even anger. Now we have the <a href="https://www.lflegal.com/2021/04/justice-branch/">controversial Winn-Dixie ruling</a>. While <a href="https://www.adatitleiii.com/2021/05/winn-dixie-saga-continues-eleventh-circuit-actively-considering-rehearing-request/">the case may be heard again</a>, the initial judgement took a collective breath away from many of us who had been used to seeing the courts identify the need for digital access as a vital aspect of nondiscrimination and basic inclusion in today’s society.</p>
+
+
+
+<p>Some may feel we are on the right path, the right trajectory. I do not. Like Ms. Heumann, I am getting tired of the status quo. We seem to address accessibility one – entity – at – a &#8211; time. So then, I want to ask how can I, how can WebAIM, how can the accessibility community, show up to disrupt? Prior disruptions were led by those with disabilities (with allies at their side), happened publicly, were covered by the media, and made a lasting difference. Can we do something similar to promote digital inclusion?</p>
+
+
+
+<p>I invite you to share your thoughts on what it means right now for the disability and accessibility community to show up to disrupt. As I have had this conversation with my colleagues at WebAIM, the conversations steered toward how our research and the media attention it receives could be disruptive. For example, WebAIM documented the <a href="https://webaim.org/blog/accessibility-of-vaccine-pages/">accessibility of COVID sites</a>. This was covered broadly. It did make a difference as the accessibility of some websites was improved in the face of what we presented. Yet was it disruptive? That statement feels a half-a-bubble off somehow. The newly announced <a href="https://gaad.foundation/">GAAD Foundation</a> has promised to be disruptive in industry. They will work initially to secure pledges so that open source efforts are accessible (they had a positive impact on improving the React framework last year). But in all of these things, I hear our work happening as it would have. Not happening as a way to disrupt.</p>
+
+
+
+<p id="show-up-to-disrupt">If we embrace the thinking that history instructs us, we should want to heed Ms. Heumann’s advice to “Show up to disrupt”. While I am not sure I know what that means for those of us who battle digital discrimination, I do know I would welcome a steady stream of disruptive tactics. So, what will that be for you? How can you engage in civil disobedience on this issue. More importantly, will you?</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://webaim.org/blog/show-up-to-disrupt/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>WebAIM Million &#8211; 2021 Update</title>
+		<link>https://webaim.org/blog/webaim-million-2021/</link>
+					<comments>https://webaim.org/blog/webaim-million-2021/#comments</comments>
+		
+		<dc:creator><![CDATA[Jared Smith]]></dc:creator>
+		<pubDate>Fri, 30 Apr 2021 16:42:38 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://webaim.org/blog/?p=2396</guid>
+
+					<description><![CDATA[The 2021 WebAIM Million Report is now available. This annual accessibility analysis of the home pages of the top one million web sites provides insight into the current state of and trends for web accessibility. The report provides details into technical aspects of accessibility and comparisons for many types of home page categories, such as [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>The 2021 <a href="https://webaim.org/projects/million/">WebAIM Million Report</a> is now available. This annual accessibility analysis of the home pages of the top one million web sites provides insight into the current state of and trends for web accessibility. The report provides details into technical aspects of accessibility and comparisons for many types of home page categories, such as by TLD, document language, site sector, and technologies in use. The <a href="https://wave.webaim.org/">WAVE web accessibility testing tool </a>was used to analyze the 1,000,000 home pages.</p>
+
+
+
+<p>Here are some interesting and noteworthy items from this year&#8217;s analysis:</p>
+
+
+
+<ul><li>The number of detectable accessibility errors was 51.4 on average per home page. This was an improvement from 60.9 errors just one year ago.</li><li>The number of elements on the average home page was 887, a slight increase from 864 in 2020. At 51.4 errors per page, users with disabilities would expect to encounter detectable errors on 1 in every 17 home page elements.</li><li>97.4% of home pages had detectable WCAG 2 failures. This was a small improvement from 98.1% in 2020.</li><li>Home pages most commonly had low contrast text, missing alternative text, missing form input labels, empty links, missing document language, and empty buttons.</li><li>86.4% of home pages had low contrast text averaging 31 instances per home page.</li><li>26% of images had missing alternative text. Over one third of all images analyzed had detectable accessibility issues.</li><li>Nearly half of all form inputs were not properly labeled.</li><li>The proper use of headings in home pages is increasing over time.</li><li>ARIA usage increased 25% since 2020 with 68% of home pages utilizing ARIA and an average of 48 ARIA attributes per page. Home pages with ARIA present averaged 41% more detectable errors (24 additional potential barriers per page) than those without ARIA. An increase in ARIA attributes aligned with an increase in detectable web accessibility errors.</li><li>79% of home pages had a valid HTML5 doctype. HTML5 pages had nearly double the page elements and 35% more accessibility errors than pages with other doctypes.</li><li>Web site categories that were subject to increased civil rights complaints and lawsuits in 2020 were among the most improved.</li><li>There were significant differences in detectable accessibility errors based on top-level domain. For example, .ru (Russia) and .cn (China) home pages had around double the errors as .us (United States) and .ca (Canada) home pages.</li><li>With the exception of React and Ruby on Rails, the presence of all other popular JavaScript frameworks, libraries, and web frameworks corresponded with an increase in detectable errors.</li></ul>
+
+
+
+<p>There is much more information and analysis available in the <a href="https://webaim.org/projects/million/">2021 WebAIM Million Report</a>.</p>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://webaim.org/blog/webaim-million-2021/feed/</wfw:commentRss>
+			<slash:comments>9</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Survey of Web Accessibility Practitioners #3 Results</title>
+		<link>https://webaim.org/blog/practitioners-survey-3/</link>
+		
+		<dc:creator><![CDATA[Jared Smith]]></dc:creator>
+		<pubDate>Wed, 24 Mar 2021 18:46:35 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://webaim.org/blog/?p=2393</guid>
+
+					<description><![CDATA[The results of WebAIM&#8217;s 3rd Survey of Web Accessibility Practitioners are now available. This was a follow-up survey to previous surveys conducted April 2014 and April 2018. There were 758 valid survey responses. Below are several items of interest. Web accessibility practitioners report being notably older than respondents to other web design/development surveys (as reported [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>The results of <a href="https://webaim.org/projects/practitionersurvey3/">WebAIM&#8217;s 3rd Survey of Web Accessibility Practitioners</a> are now available. This was a follow-up survey to previous surveys conducted <a href="https://webaim.org/projects/practitionersurvey/">April 2014</a> and <a href="https://webaim.org/projects/practitionersurvey2/">April 2018</a>. There were 758 valid survey responses. Below are several items of interest.</p>
+
+
+
+<ul><li>Web accessibility practitioners report being notably older than respondents to other web design/development surveys (as reported in <a href="https://insights.stackoverflow.com/survey/2020">the 2020 Stack Overflow survey</a>).</li><li>57% of respondents were male, 40% of respondents were female (5 times higher than the broader design/development field), and 3% non-binary, genderqueer, or gender non-conforming (twice as high as the broader design/development field).</li><li>29% of respondents indicated having a disability (15 times higher than the broader design/development field).</li><li>The average reported salary was at least $73,000, notably higher than the broader design/development field. Salaries of web accessibility practitioners have increased steadily over time.</li><li>Female respondents earn an average of at least $6,100 less than their male counterparts, a notably increased gap from $2,100 reported in 2018.</li><li>Respondents with disabilities reported an average of at least $1,800 less than respondents without disabilities, a notably decreased gap from $4,200 in 2018.</li><li>Mac OS is now the most common operating system. Chrome dominates with 63% of respondents reporting it as their primary browser.</li><li>Respondents are generally pessimistic about web accessibility progress over time with 87% indicating that accessibility has gotten worse or not improved over the last year.</li><li>21% of respondents from corporations/industry reported receiving a lawsuit, threat of lawsuit, or OCR complaint compared to 39% of respondents (nearly double) from educational institutions.</li><li>NVDA (37%) and VoiceOver (35%) are the most commonly used screen readers for testing, compared to only 16% for JAWS (down from 37% in 2014).</li><li>Axe, browser developer tools, and WAVE are reported as the most commonly used testing tools.</li><li>76% of respondents indicate that ARIA has made the web more accessible, though that sentiment is much lower among respondents with disabilities and with more accessibility experience.</li><li>A strong majority (67%) of respondents rate <a href="https://overlayfactsheet.com/">web accessibility overlays, plugins, or widgets</a> as not at all or not very effective. Respondents with disabilities were even less favorable with 72% rating them not at all or not very effective, and only 2.4% rating them as very effective.</li></ul>
+
+
+
+<p>There is much, much more in <a href="https://webaim.org/projects/practitionersurvey3/">the survey results article</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Accessibility of COVID-19 Vaccine Pages and Barriers to Individuals with Disabilities</title>
+		<link>https://webaim.org/blog/accessibility-of-vaccine-pages/</link>
+					<comments>https://webaim.org/blog/accessibility-of-vaccine-pages/#comments</comments>
+		
+		<dc:creator><![CDATA[Jared Smith]]></dc:creator>
+		<pubDate>Fri, 26 Feb 2021 18:40:25 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://webaim.org/blog/?p=2387</guid>
+
+					<description><![CDATA[WebAIM contributed to an article authored by Kaiser Health News and republished in the LA Times regarding the accessibility barriers posed by vaccine registration pages in the US. Our automated WAVE analysis of vaccine information and registration web sites for all 50 state (plus DC) sites discovered that most sites may pose notable barriers to [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>WebAIM contributed to <a href="https://khn.org/news/article/covid-vaccine-websites-violate-disability-laws-create-inequity-for-the-blind/">an article authored by Kaiser Health News</a> and <a href="https://www.latimes.com/california/story/2021-02-25/covid-19-vaccine-websites-violate-disability-laws-create-inequity-for-the-blind">republished in the LA Times</a> regarding the accessibility barriers posed by vaccine registration pages in the US. Our automated <a href="https://wave.webaim.org/">WAVE</a> analysis of vaccine information and registration web sites for all 50 state (plus DC) sites discovered that most sites may pose notable barriers to users with disabilities. All but 13 of the 94 pages tested had detectable accessibility issues.</p>
+
+
+
+<p>On average the 94 state-level COVID-19 vaccine pages averaged 18.9 detectable errors. The most common error was <a href="https://webaim.org/articles/contrast/">low contrast text</a>. Other common issues were <a href="https://webaim.org/techniques/alttext/">images missing alternative text</a>, <a href="https://webaim.org/techniques/hypertext/">empty links and buttons</a>, and <a href="https://webaim.org/techniques/forms/">missing form input labels</a> (text that would describe the purpose or function of form fields). While automated tools, such as WAVE, cannot detect all or even most accessibility issues, the issues detected tend to be highly impactful for users with disabilities. These potential barriers may be considered discriminatory and thus put the page owners at risk.</p>
+
+
+
+<p>The accessibility of these pages is generally better than <a href="https://webaim.org/projects/million/">average home pages on the web</a>, and a bit better than state .gov pages in general, but these vaccine pages provide critical health information and functionality. While the burden falls squarely on state departments of health and local health departments to ensure equitable access to vaccine information and registration pages, many of these entities have contracted with 3rd party systems to provide this information and functionality. Regardless of the source of these barriers, lack of accessibility of these pages has a significant impact on the aging and disabled populations that are most impacted by COVID-19.<br><br>UPDATE: On March 3, 2021 thirteen US Senators authored <a href="https://www.hassan.senate.gov/imo/media/doc/CovidVaccineAccessibility.210303.pdf">a letter inquiring about federal processes for better ensuring accessibility of COVID vaccine web sites</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://webaim.org/blog/accessibility-of-vaccine-pages/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>WAVE 3.1 Release</title>
+		<link>https://webaim.org/blog/wave-3-1-release/</link>
+		
+		<dc:creator><![CDATA[Jared Smith]]></dc:creator>
+		<pubDate>Wed, 23 Sep 2020 13:50:17 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://webaim.org/blog/?p=2367</guid>
+
+					<description><![CDATA[Version 3.1 of the various WAVE web accessibility evaluation tools has been released. These updates are now available in the online WAVE tool, the Chrome and Firefox extensions, the WAVE subscription API and stand-alone API, and the WAVE Runner reporting service. These updates are also available in the Pope Tech enterprise accessibility testing and reporting [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>Version 3.1 of the various <a href="https://wave.webaim.org/">WAVE web accessibility evaluation tools</a> has been released. These updates are now available in the online WAVE tool, the <a href="https://wave.webaim.org/extension/">Chrome and Firefox extensions</a>, the <a href="https://wave.webaim.org/api/">WAVE subscription API</a> and <a href="https://wave.webaim.org/standalone">stand-alone API</a>, and the <a href="https://wave.webaim.org/waverunner">WAVE Runner reporting service</a>. These updates are also available in the <a href="https://pope.tech/">Pope Tech enterprise accessibility testing and reporting service</a>.</p>
+
+
+
+<h2>New and Updated Accessibility Tests</h2>
+
+
+
+<h3>YouTube Video</h3>
+
+
+
+<p>YouTube videos are identified as an Alert which prompts users to verify that the video has equivalent captions.</p>
+
+
+
+<h3>Expanded ARIA and Title Attribute Support</h3>
+
+
+
+<p>WAVE now better considers ARIA in defining accessibility for page elements. For example, empty links and buttons that have an ARIA label are no longer identified as errors. Images and inputs that do not have associated labels or ARIA labels, but do have non-empty <code>title</code> attribute values are no longer flagged as errors, but an Alert is presented to prompt further testing.</p>
+
+
+
+<h3>Expanded and Improved Contrast Testing</h3>
+
+
+
+<p>WAVE&#8217;s text contrast checking has been expanded and improved to test for WCAG contrast failures within most form inputs. False errors are now much less likely for text that has CSS-defined opacity, gradients, or filters.</p>
+
+
+
+<h3>Generic Regions</h3>
+
+
+
+<p>Generic ARIA landmark regions &#8211; <code>role="region"</code> that is properly labeled with <code>aria-label</code> or <code>aria-labelledby</code> are now identified as Structural Elements. These also appear within the Structure panel in WAVE.</p>
+
+
+
+<h3>Possible Lists</h3>
+
+
+
+<p> WAVE will now identify text structures that appear to be lists but that do not use list markup. More than one adjacent item that begin with the following (or similar) patterns are indicated with an Alert:<br>* text<br>1. text<br>a. text<br>1) text<br>a) text<br>&#8211; text</p>
+
+
+
+<h3>Figure</h3>
+
+
+
+<p>Any <code>&lt;figure&gt;</code> elements are now identified as Features.</p>
+
+
+
+<h3>Select elements missing labels</h3>
+
+
+
+<p>When a <code>&lt;select&gt;</code> element does not have an associated label (or ARIA label), but does have a default <code>&lt;option&gt;</code>, the option is presented visually and to screen reader users. These are no longer flagged as being an unlabelled input Error, but an Alert icon is present to prompt the WAVE user to ensure the default option sufficiently describes the select menu.</p>
+
+
+
+<h3>Document and Element Language</h3>
+
+
+
+<p>WAVE previously identified elements that have a <code>lang</code> attribute, and indicate an error if the document language was not identified. This testing has been expanded to check for valid <code>lang</code> attribute values. Additionally, the language defined is now visually presented within the WAVE interface to facilitate human verification.</p>
+
+
+
+<h2>Other Functionality Changes</h2>
+
+
+
+<p>The visual WAVE interface now provides clearer identification of WAVE icons that are visually hidden due to page styles, as well as icons that are associated to hidden page elements. Users are prompted to disable Styles or view the Code panel to analyze these hidden items.</p>
+
+
+
+<p>For text that does not meet the WCAG contrast requirements, the WAVE API now has an option to return the foreground color, background color, contrast ratio, and an indicator if the text is &#8220;large&#8221; or not (per the WCAG definition). This can facilitate better analysis and remediation of WCAG text contrast failures.</p>
+
+
+
+<p>In addition to everything above, this WAVE 3.1 update includes hundreds of minor bug fixes, testing logic enhancements and improvements, and accessibility and performance enhancements. WAVE is now faster and more accurate than ever! And we have many more improvements in store!</p>
+
+
+
+<p>We&#8217;d love to hear your <a href="https://wave.webaim.org/feedback">feedback and recommendations</a> on how we can make WAVE even better.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>WCAG 2.2 Overview and Feedback</title>
+		<link>https://webaim.org/blog/wcag-2-2-overview-and-feedback/</link>
+					<comments>https://webaim.org/blog/wcag-2-2-overview-and-feedback/#comments</comments>
+		
+		<dc:creator><![CDATA[Jared Smith]]></dc:creator>
+		<pubDate>Mon, 31 Aug 2020 19:18:09 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://webaim.org/blog/?p=2331</guid>
+
+					<description><![CDATA[A working draft of version 2.2 of the Web Content Accessibility Guidelines (WCAG) has been published for feedback. WebAIM is thrilled to see the work on these formative guidelines continuing and we appreciate the efforts of the W3C&#8217;s Accessibility Guidelines working group. Below are WebAIM&#8217;s plain language summaries of each of the new proposed success [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.w3.org/TR/WCAG22/">A working draft of version 2.2 of the Web Content Accessibility Guidelines (WCAG)</a> has been published for feedback. WebAIM is thrilled to see the work on these formative guidelines continuing and we appreciate the efforts of the W3C&#8217;s Accessibility Guidelines working group. Below are WebAIM&#8217;s plain language summaries of each of <a href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/">the new proposed success criteria</a>, as well as discussion and our recommendations.</p>
+<p><strong>WebAIM currently supports adoption of 1 success criterion as currently drafted. The remaining 8 proposed success criteria would benefit from greater clarity and specificity before they are considered for inclusion in WCAG.</strong> In some instances, we have provided recommendations and justifications for shifting proposed success criteria to a different WCAG Level.</p>
+<p><em>WebAIM&#8217;s lack of support of a success criterion does not mean that we are opposed to the principles or recommendations provided. It instead simply indicates that we believe it is not currently viable for inclusion in WCAG as drafted.</em></p>
+<h2>Focus Visible to Level A</h2>
+<p>We fully support the transition of <a href="https://www.w3.org/TR/WCAG22/#focus-visible">Focus Visible</a> from Level AA to Level A. While this is the first time that a sub-version of WCAG 2 would modify the level of an existing success criterion, this is a much-needed and welcome change that WebAIM has promoted since the release of 2.0 in 2008. While this success criterion still lacks a clear definition of what constitutes a &#8220;visible&#8221; focus indicator (this is now defined in additional proposed success criteria below), this elevates the critical need for keyboard focus indicators.</p>
+<h2>Focus Appearance</h2>
+<h3>Summary</h3>
+<p><a href="https://www.w3.org/TR/WCAG22/#focus-appearance-minimum">Focus Appearance (Minimum &#8211; Level AA)</a> requires that focus indicators have a minimum number of pixels that change color with at least a 3:1 contrast ratio. The focus indicator must also contrast with surrounding colors. The element must not be entirely hidden when it receives focus.</p>
+<p><a href="https://www.w3.org/TR/WCAG22/#focus-appearance-enhanced">Focus Appearance (Enhanced &#8211; Level AAA)</a> additionally requires more pixels that change with at least 4.5:1 contrast and that the element be entirely visible when it receives focus.</p>
+<h3>Discussion &amp; Recommendations</h3>
+<h4>Minimum area</h4>
+<blockquote>
+<p>The focus indication area is greater than or equal to a 1 CSS pixel border of the focused control, or has a thickness of at least 8 CSS pixels along the shortest side of the element.</p>
+</blockquote>
+<p>This definition introduces confusion because it equates a surface area to a perimeter (which is inherently without area). We recommend the addition of clarifying language, such as &#8220;The focus indication area is at least as large as the area covered by a 1 CSS pixel wide border of the focused control, or has a width of at least 8 CSS pixels along the shortest side of the element.&#8221; </p>
+<h4>Change of contrast</h4>
+<blockquote>
+<p>The color change for the focus indication area has a contrast ratio of at least 3:1 with the colors of the unfocused state.</p>
+</blockquote>
+<p>It is not clear what &#8220;the unfocused state&#8221; refers to. Is it the unfocused state of the interactive element? Or of the focus indication area (which cannot be focused)? Our recommendation for much clearer language: &#8220;The focus indication area has a contrast ratio of at least 3:1 against the same pixels when the control is not focused. This contrasting area must be at least as large as the Minimum Area.&#8221; This would clarify that the focus indicator does not <em>necessarily</em> have to contrast with the element, but only with a minimum area that the focus indicator covers.</p>
+<h4>Adjacent contrast</h4>
+<blockquote>
+<p>The focus indication area has a contrast ratio of at least 3:1 against all adjacent colors for the minimum area or greater, or has a thickness of at least 2 CSS pixels.</p>
+</blockquote>
+<p>This ensures that the focus indicator has sufficient contrast with its adjacent colors or is sufficiently large. We recommend only changing &#8220;for the minimum area or greater&#8221; to &#8220;for at least the minimum area&#8221; for clarity and harmony.</p>
+<h4>Unobscured</h4>
+<blockquote>
+<p>The item with focus is not entirely hidden by author-created content.</p>
+</blockquote>
+<p>We understand the intent to be that the focused item is not obscured by page elements, such as sticky headers/footers or expanded menus or dialogs. However, &#8220;not entirely hidden&#8221; would allow all but one pixel of the focused element to be hidden. We recommend changes to ensure focused elements are fully or substantially visible at the time they receive focus (as is required under the &#8220;Enhanced&#8221; requirement at AAA).</p>
+<h3>Adoption</h3>
+<p><strong>We do not support adoption of this success criterion as drafted.</strong> Adoption would be supported if clarifications and changes are provided to scope and language of the normative text.</p>
+<h2>Fixed Reference Points</h2>
+
+
+<h3>Summary</h3>
+
+
+
+<p><a href="https://www.w3.org/TR/WCAG22/#fixed-reference-points">Fixed Reference Points (Level A)</a> requires that when page numbering is provided in &#8220;electronic publications&#8221; that users can navigate to each page and that the page numbering remains consistent when the content is modified.</p>
+
+
+
+<h3>Discussion &amp; Recommendations</h3>
+
+
+
+<p>This success criterion is problematic. This is not an issue that WebAIM has encountered in HTML content. While the criterion applies when &#8220;a web page or set of web pages <em>is an electronic publication</em>&#8220;, it does not provide a clear distinction as to when a web page is considered an &#8220;electronic publication&#8221;.</p>
+
+
+
+<p>This criterion would to be most applicable to file formats such as PDF or EPUB, where page numbering is most relevant. It would be optimal for page numbering issues be addressed in the user agents that present these documents, rather than by placing the burden on content authors.</p>
+
+
+
+<p>The only published technique currently provided by the W3C is to provide a list of links to every page within the document. This is obtrusive to design and would itself introduce significant overhead and potential confusion for many users with disabilities. For example, imagine having to navigate through numerous links, one for each page, at the beginning of an online journal article.</p>
+
+
+
+<h4>Adoption</h4>
+
+
+
+<p><strong>We oppose the adoption of this success criterion as drafted.</strong> We would, however, support its adoption at Level AAA.</p>
+
+
+
+<h2>Dragging</h2>
+
+
+
+<h3>Summary</h3>
+
+
+
+<p><a href="https://www.w3.org/TR/WCAG22/#dragging">Dragging (Level AA)</a> requires that dragging functionality that is not essential to the activity has an alternative operation that works via single click/touch inputs.</p>
+
+
+
+<h3>Discussion &amp; Recommendations</h3>
+
+
+
+<p>While dragging functionality would seemingly be covered by <a href="https://www.w3.org/TR/WCAG22/#pointer-gestures">SC 2.5.1 Pointer Gestures</a> at Level A , the non-normative W3C documentation clarifies that it is not, despite common sense suggesting that dragging is a &#8220;path-based gesture&#8221;. This new criterion, therefore, is a welcome addition to better ensure that users with motor disabilities, particularly those lacking fine motor control, have an alternative method for performing dragging functionality that does not require use of a keyboard.</p>
+
+
+
+<h3>Adoption</h3>
+
+
+
+<p><strong>We support the adoption of this success criterion as drafted. </strong></p>
+
+
+
+<h2>Pointer Target Spacing</h2>
+
+
+
+<h3>Summary</h3>
+
+
+
+<p><a href="https://www.w3.org/TR/WCAG22/#pointer-target-spacing">The Pointer Target Spacing success criterion (Level AA)</a> requires that touch targets be contained within a 44&#215;44 pixel area that does not contain a portion of any other touch target.</p>
+
+
+
+<p>The intent is to limit errant activation of controls that are too close together. Exceptions are in place for inline links and default controls, such as default select menu options.</p>
+
+
+
+<h3>Discussion &amp; Recommendations</h3>
+
+
+
+<p>The normative text makes understanding this success criterion rather difficult. The &#8220;Summary&#8221; wording above would provide a much more understandable alternative.</p>
+
+
+
+<p>While the success criterion states, &#8220;This criterion has been formulated to increase the hit-area of small targets&#8221;, this is not at all what it actually does. It instead requires that targets not be too close together.</p>
+
+
+
+<p>Like &#8220;Target Size&#8221; at Level AAA in WCAG 2.1, this success criterion would certainly address accessibility issues for users with motor disabilities, and it aligns with mobile design best practices, but there are many edge cases and unintended consequences. In some cases, the easiest way to meet this success criterion is to simply make the touch targets smaller.</p>
+
+
+
+<p>Consider several adjacent clickable icons that are 36X36 pixels each, with 3 pixels of space between each icon. For the middle icon it is impossible to have a 44X44 pixel area that doesn&#8217;t include part of an adjacent icon, so this would fail the Pointer Target Spacing requirements.</p>
+
+
+
+<p><img class="wp-image-2336" width="123" src="https://webaim.org/blog/wp-content/uploads/2020/08/WCAG-Target-Spacing.png" alt="Illustration of how smaller icon target sizes can be implemented to support pointer target spacing." srcset="https://webaim.org/blog/wp-content/uploads/2020/08/WCAG-Target-Spacing.png 246w, https://webaim.org/blog/wp-content/uploads/2020/08/WCAG-Target-Spacing-219x300.png 219w" sizes="(max-width: 246px) 100vw, 246px" /></p>
+
+
+
+<p>If, however, the icons were made smaller at 32 pixels in size with 9 pixels of space between each, they would take the same amount of horizontal space and each target would fit exclusively in a 44X44 pixel area (thus passing this success criterion), but the icons would be now much smaller and thus more difficult for users with low vision and certain types of motor disabilities to see and activate. One accessibility issue has been improved while potentially making another one worse. This introduces a conflict between disability types, with users with motor disabilities prioritized over users with visual disabilities.</p>
+
+
+
+<h3>Adoption</h3>
+
+
+
+<p>Because of these potential conflicts and the impact this can have on design and functionality, <strong>we do not support the adoption of this success criterion as drafted, but strongly encourage its adoption at Level AAA</strong>.</p>
+
+
+
+<h2>Findable Help</h2>
+
+
+
+<h3>Summary</h3>
+
+
+
+<p>The <a href="https://www.w3.org/TR/WCAG22/#findable-help">Findable Help success criterion (Level A)</a> requires that at least one form of self-help or human contact functionality or information, if present on single page web applications or sets of web pages, be presented in the same relative order each time it is presented.</p>
+
+
+
+<h3>Discussion &amp; Recommendations</h3>
+
+
+
+<p>While <a href="https://www.w3.org/TR/WCAG22/#consistent-navigation">Consistent Navigation (Level AA)</a> generally covers these requirements, the added impact of inconsistency in navigation order for important site functionality, such as help or contact details, supports adoption of this new success criterion.</p>
+
+
+
+<p>However, the title of this success criterion &#8220;Findable Help&#8221; does not really align with its purpose and intent, and thus introduces potential confusion. This success criterion does not actually require that help be &#8220;findable&#8221;, only that it be consistently navigable.</p>
+
+
+
+<p>The <a href="https://www.w3.org/WAI/WCAG22/Understanding/findable-help.html">Understanding document for 3.2.6</a> significantly overstates the normative requirements and goes well beyond its scope, even so far as indicating the type of help that a site should provide and who within an organization should be contactable. While wonderful recommendations, these are not directly relevant to the success criterion at hand.</p>
+
+
+
+<p>It seems an oversight that this success criterion does not also include the requirements found under <a href="https://www.w3.org/TR/WCAG22/#consistent-identification">Consistent Identification (Level AA)</a>. In other words, a contact link could be called &#8220;Feedback&#8221; on one page and &#8220;Contact Us&#8221; on another, but could still pass &#8220;Findable Help&#8221;.</p>
+
+
+
+<h3>Adoption</h3>
+
+
+
+<p><strong>We oppose the adoption of this success criterion as drafted, but we would support adoption if it is improved by being given a more accurate title (e.g., &#8220;Consistent Navigation to Help&#8221;).</strong> It could further be greatly improved by adding requirements for consistent identification.</p>
+
+
+
+<h2>Hidden Controls</h2>
+
+
+
+<h3>Summary</h3>
+
+
+
+<p>A clear summary for the <a href="https://www.w3.org/TR/WCAG22/#hidden-controls">Hidden Controls (Level AA)</a> proposed success criterion is not really feasible. The current success criterion language is &#8220;Controls needed to progress or complete a process are visible at the time they are needed without requiring pointer hover or keyboard focus, or a mechanism is available to make them persistently visible.&#8221;</p>
+
+
+
+<h3>Discussion &amp; Recommendations</h3>
+
+
+
+<p>This proposed success criterion has significant problems with scoping, word choice, and clarity. It is very difficult to understand what is required and when it would apply. “Controls” are not defined. Nearly every web interaction could be interpreted as a &#8220;process&#8221;. Substantive examples and techniques are lacking. Insufficient definitions of &#8220;controls&#8221;, &#8220;progress&#8221;, and &#8220;process&#8221; leave the reader unable to fully comprehend the scope of this success criterion.</p>
+
+
+
+<h3>Adoption</h3>
+
+
+
+<p><strong>We strongly opposed the adoption of this success criterion as drafted.</strong></p>
+
+
+
+<h2>Accessible Authentication</h2>
+
+
+
+<h3>Summary</h3>
+
+
+
+<p>The proposed <a href="https://www.w3.org/TR/WCAG22/#accessible-authentication" data-type="URL" data-id="https://www.w3.org/TR/WCAG22/#accessible-authentication">Accessible Authentication success criterion (Level A)</a> requires that authentication processes not require cognitive function tests that require memorization, transcription, correct spelling, or completion of calculations or puzzles.</p>
+
+
+
+<h3>Discussion &amp; Recommendations</h3>
+
+
+
+<p>While the intent is to avoid the need for high levels of cognitive function to authenticate, the current scoping of this success criterion is ambiguous and confusing.</p>
+
+
+
+<p>The types of authentication processes that are and are not allowed are not clear. For example, <a href="https://www.w3.org/TR/WCAG22/#dfn-cognitive-function-test">the definition for &#8220;cognitive function test&#8221;</a> specifically prohibits &#8220;memorization, such as remembering a username or password&#8221;, yet the <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication">Understanding document</a> specifically states &#8220;Web sites can employ username and password inputs as an authentication method&#8230; if password managers / browser functionality is not blocked&#8221;. It is therefore unclear whether one can use username/password as an authentication mechanism. If password entry is not allowed, this conflicts with &#8220;redundant password entry&#8221; which is defined as an &#8220;essential activity&#8221; under Redundant Entry (below).</p>
+
+
+
+<p>A very common two-factor authentication method is to email or text a passcode which is then entered into a web form. Is this a &#8220;transcription&#8221; cognitive function test? If yes, is it still so if copy/pasting the passcode is supported?</p>
+
+
+
+<p>Is requiring the user to click all images with bicycles, for example, a &#8220;puzzle&#8221;?</p>
+
+
+
+<p>The success criterion appears to try to limit the scope of memorization to things that are general to the user&#8217;s knowledge, but that are not site-specific. As such, is a site requiring me to enter my mother&#8217;s maiden name &#8220;memorization&#8221;? Similarly, <em>many</em> web sites use 3rd party services, such as social media services, for authentication. If a web sites asks for a Twitter handle (then uses this to automatically authenticate via Twitter) is this considered a &#8220;memorization&#8221; cognitive test?</p>
+
+
+
+<h3>Adoption</h3>
+
+
+
+<p><strong>We oppose the adoption of this success criterion as drafted. </strong>While the intent of it is worthwhile, additional clarity is needed. We would support its adoption as drafted at Level AAA.</p>
+
+
+
+<h2>Redundant Entry</h2>
+
+
+
+<h3>Summary</h3>
+
+
+
+<p>The <a href="https://www.w3.org/TR/WCAG22/#redundant-entry">Redundant Entry success criterion (Level A)</a> requires that users not be required to re-enter information for subsequent steps in a process.</p>
+
+
+
+<h3>Discussion &amp; Recommendations</h3>
+
+
+
+<p>As with Hidden Controls above, &#8220;process&#8221; is not adequately defined. This success criterion further applies to &#8220;steps in a process&#8221;, but &#8220;steps&#8221; is not defined. Further, WCAG and its supporting materials do not provide clear examples of where this success criterion applies or examples of any potential failures. It is nearly impossible to know the scope of this success criterion from the existing language.</p>
+
+
+
+<h3>Adoption</h3>
+
+
+
+<p><strong>We strongly oppose the adoption of this success criterion as drafted.</strong></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://webaim.org/blog/wcag-2-2-overview-and-feedback/feed/</wfw:commentRss>
+			<slash:comments>6</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Anniversaries Celebrated</title>
+		<link>https://webaim.org/blog/anniversaries-celebrated/</link>
+		
+		<dc:creator><![CDATA[Cyndi Rowland]]></dc:creator>
+		<pubDate>Mon, 27 Jul 2020 19:37:21 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://webaim.org/blog/?p=2319</guid>
+
+					<description><![CDATA[Sunday, July 26, 2020 marked the 30th anniversary of the Americans with Disabilities Act. During WebAIM’s 20th anniversary year, we take this opportunity to cherish this landmark legislation which codified equal opportunity and protections for those with disabilities. For many, it is difficult to recall the reality of life before the ADA. Concepts like “self-determination”, [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>Sunday, July 26, 2020 marked the 30th anniversary of the Americans with Disabilities Act. During WebAIM’s 20th anniversary year, we take this opportunity to cherish this landmark legislation which codified equal opportunity and protections for those with disabilities.</p>
+
+
+
+<p>For many, it is difficult to recall the reality of life before the ADA. Concepts like “self-determination”, “independent living”, and  even “choice” were battlegrounds for those with disabilities. The ADA provided both aspirations and legal protections that facilitated great improvements.</p>
+
+
+
+<p>During the <a href="https://www.ada.gov/ghw_bush_ada_remarks.html">signing ceremony</a>, George H.W. Bush indicated:</p>
+
+
+
+<blockquote class="wp-block-quote"><p>Our success with this act proves that we are keeping faith with the spirit of our courageous forefathers who wrote in the Declaration of Independence: &#8220;We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable rights.&#8221; These words have been our guide for more than two centuries as we&#8217;ve labored to form our more perfect union. But tragically, for too many Americans, the blessings of liberty have been limited or even denied. The Civil Rights Act of &#8217;64 took a bold step towards righting that wrong. But the stark fact remained that people with disabilities were still victims of segregation and discrimination, and this was intolerable. Today&#8217;s legislation brings us closer to that day when no Americans will ever again be deprived of their basic guarantee of life, liberty, and the pursuit of happiness.</p></blockquote>
+
+
+
+<p>There is no doubt that the ADA has had an enormous positive impact on web accessibility. Court cases and the Department of Justice have clarified that while the word “internet” never appears in the ADA, the intent of the law includes it. The ADA has positively impacted web content as it affects rights to employment, rights to public services, and rights to participate in places that offer goods and services to the general public (i.e., public accommodations).</p>
+
+
+
+<p>While we look at the positive trajectory of digital accessibility, there is still much to accomplish. This anniversary provides us all an opportunity to reflect, and to act.</p>
+
+
+
+<p>The current digital landscape is full of seemingly intractable barriers. COVID-19 illuminated vulnerabilities that were always there. WebAIM is one of many groups to battle the swell of inaccessible web content. As a community we have had enormous success, yet given the proliferation of the web, these successes feel almost buried. Many studies, including the <a href="https://webaim.org/projects/million/">WebAIM Million</a> point to a grim reality, that far too few websites conform to accessibility standards. The same is seen across social sectors (e.g., <a href="https://webaim.org/blog/alexa-100-update-2/">Alexa top 100 sites</a>, <a href="https://naspa.tandfonline.com/doi/abs/10.1080/10668926.2019.1600604#.Xxn_mB17lTY">colleges</a> and <a href="http://jehdnet.com/journals/jehd/Vol_8_No_2_June_2019/3.pdf">universities</a>, <a href="https://www.ada.gov/508/508_Report.htm">federal government</a>, <a href="https://webaim.org/blog/web-accessibility-among-nonprofits/">nonprofits</a>, and <a href="https://webaim.org/projects/uceddlongitudinal/">disability organizations</a>). The need for increased web accessibility is desired <a href="https://ec.europa.eu/digital-single-market/en/policies/creating-digital-society">across the globe</a>. Because of rampant inaccessibility, those with disabilities and advocacy groups who fight on their behalf engage in a high volume of complaints, negotiated settlements, and litigation (e.g., <a href="https://www.lflegal.com/2020/07/ada30-update/">LFLegal</a>, <a href="https://blog.usablenet.com/web-accessibility-lawsuits-whats-new-in-2020">UsableNet</a>).</p>
+
+
+
+<p>We are among those who believed that the promised creation of digital accessibility rules under ADA would improve digital accessibility outcomes. <a href="https://webaim.org/blog/webaims-sanprm-response/">Private businesses have long awaited this needed clarity</a>. We are frustrated that the <a href="https://webaim.org/blog/dojhaltswebguidance/">Department of Justice stopped the rulemaking process</a> for defining accessibility requirements for websites covered under the ADA. This frustration was exacerbated when the <a href="https://www.adatitleiii.com/2017/07/doj-places-website-rulemaking-on-the-inactive-list/">DOJ put the rulemaking on their “inactive” list</a> due to changes in the regulatory landscape under the Trump Administration.</p>
+
+
+
+<p>When entities understand their obligations, and the standard and manner to which they must comply, they will be more likely to attain success. While these are not yet clearly defined under the ADA, entities have exposure to complaints and litigation nonetheless. Despite these setbacks, we believe that entities have little excuse if they are not already making reasonable <a href="https://www.browngold.com/wp-content/uploads/BNA-Fighting-for-Accessible-Websites-Under-ADA.pdf">progress toward accessibility</a>. We will celebrate the day when proper rulemaking is completed.</p>
+
+
+
+<p>Until that time, each of us can, in the spirit of the Americans with Disabilities Act, work to achieve its aims. WebAIM will continue its work to expand the potential of the web for people with disabilities by empowering individuals and organizations to create accessible content. We’ll continue our work to provide knowledge, technical skills, tools, organizational leadership strategies, and vision in all that we do. We hope to celebrate another 20 years in the future.</p>
+
+
+
+<p>We invite you to reflect on your work and the ADA. Hopefully you will see yourself in this continuing struggle. Then, let us celebrate thirty remarkable years as we each work to attain civil rights under the ADA. May we fulfil our obligation, poignantly spoken during its signing:</p>
+
+
+
+<blockquote class="wp-block-quote"><p>The ADA is a dramatic renewal not only for those with disabilities but for all of us, because along with the precious privilege of being an American comes a sacred duty to ensure that every other American&#8217;s rights are also guaranteed&#8230; Our problems are large, but our unified heart is larger. Our challenges are great, but our will is greater. And in our America, the most generous, optimistic nation on the face of the Earth, we must not and will not rest until every man and woman with a dream has the means to achieve it.</p></blockquote>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

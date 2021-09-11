@@ -1,0 +1,1523 @@
+/* removed these to accommodate older existing tables: table, caption, tbody, tfoot, thead, tr, th, td - also removed sup & sub */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+}
+/* tds have a 1px padding by default - reset from above */
+td {padding: 0;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: ''; content: none;}
+/* remember to define focus styles */
+:focus {outline: 0;}
+/* remember to highlight inserts somehow */
+ins {text-decoration: none;}
+del {text-decoration: line-through;}
+/* tables still need 'cellspacing="0"' in the markup */
+table {border-collapse: collapse; border-spacing: 0;}
+
+
+
+/* ------------------------------------------------------- */
+/* ------ ABOVE is the RESET - BELOW is the REBUILD ------ */
+/* ------------------------------------------------------- */
+/*Click hack for IOS*/
+#bkg.mc-ios {cursor: pointer}
+
+blockquote {
+    padding: 18px;
+    margin: 18px 36px;
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-bottom-color: #aaa;
+}
+
+hr {border: 0; background: #eee; color: #eee; height: 2px; margin: 18px 0;}
+
+ul {list-style-type: disc;}
+ul ul {list-style-type: circle;}
+ul ul ul {list-style-type: square;}
+ul ul ul ul {list-style-type: circle;}
+ol {list-style-type: decimal;}
+ol ol {list-style-type: lower-alpha;}
+ol ol ol {list-style-type: decimal;}
+ol ol ol ol {list-style-type: lower-alpha;}
+ul, ol {margin: 18px 0 18px 40px;}
+ul ul, ul ol, ol ol, ol ul {margin: 6px 0 6px 40px;}
+
+/* prevents a 15px space at the bottom of single articles - blog separators are reset later */
+span.article_separator {display: none;}
+
+/* joomla structure protection */
+table.contentpaneopen {width: 100%;}
+.contentpaneopen td {padding: 0;}
+
+/* tables in content */
+.contentpaneopen table {margin: 0px 0px 18px 0px;}
+.contentpaneopen table td, #tinymce table td {
+  padding: 9px; 
+  border: 1px solid #ddd; 
+  vertical-align: top;
+}
+.contentpaneopen table th, #tinymce table th {
+  background: #ddd; 
+  color: #333; 
+  border: 1px solid #ddd; 
+  padding: 9px 0;}
+/* borderless option */
+.contentpaneopen table.borderless td {border: 0; padding: 0;}
+#tinymce table.borderless td {border: 1px dotted #e0e0e0; padding: 0;}
+
+/* old form protection */
+#formContainer table {border-collapse: separate;}
+#formContainer table td {font-size: 13px;}
+
+
+
+/* --------------------------------------------- */
+/* ------ TYPOGRAPHY --------------------------- */
+/* --------------------------------------------- */
+
+body, #tinymce td, #content-padding, input {
+    font: 15px 'Roboto', Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+    color: #4A4A4A;
+}
+
+input {font-size: 11px;}
+
+p {margin: 0px 0px 17px;}
+
+h1, h2, h3, h4, h5, h6, td.contentheading {}
+h1, td.contentheading {
+    font-size: 24px;
+    line-height: 34px;
+    padding: 0 0 20px 0;
+}
+
+h2 {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 14px;
+    line-height: 26px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 13px;
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+
+h5 {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+h6 {
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+
+h1:first-child, h2:first-child, h3:first-child,
+h4:first-child, h5:first-child, h6:first-child,
+ul:first-child, ol:first-child {margin-top: 0px;}
+
+a, a:visited {
+text-decoration: underline;
+}
+
+a:hover, a:active {
+text-decoration: none;
+}
+
+
+
+/* ----------------------------------- */
+/* ------ MISC STYLES ---------------- */
+/* ----------------------------------- */
+
+.clarence {clear: both !important;}
+.spacey {margin: 0px 3px;} /* often wraps |s in link lists or small info */
+.hidden {display: none !important;}
+.float-left {float: left !important;}
+.float-right {float: right !important;}
+.no-float {float: none !important;}
+.no-margin {margin: 0 !important;}
+.no-left-margin {margin-left: 0 !important;}
+.no-right-margin {margin-right: 0 !important;}
+.no-top-margin {margin-top: 0 !important;}
+.no-bottom-margin {margin-bottom: 0 !important;}
+.v-margin-10 {margin-top: 10px !important; margin-bottom: 10px !important;}
+.v-margin-20 {margin-top: 20px !important; margin-bottom: 20px !important;}
+.h-margin-10 {margin-left: 10px !important; margin-right: 10px !important;}
+.h-margin-20 {margin-left: 20px !important; margin-right: 20px !important;}
+.top-margin-10 {margin-top: 10px !important;}
+.top-margin-20 {margin-top: 20px !important;}
+.bottom-margin-10 {margin-bottom: 10px !important;}
+.bottom-margin-20 {margin-bottom: 20px !important;}
+/* '.home' on the default menu item + '.hide-on-home' on the module */
+body.home .hide-on-home {display: none !important;}
+.bulletproof {list-style: none !important; list-style-position: outside !important /* IE 7 indentation fix */;}
+
+/*** Layout ***/
+.site-width {max-width: 980px; margin: 0 auto; position: relative; padding: 0 10px}
+/*
+for containing floats */
+.site-width:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#menu-button {position: relative;}
+#menu-container {position: relative; height: 60px;}
+
+#header {position: relative;}
+#search-bar {
+  z-index: 1;
+  position: relative;
+  background: none; 
+  overflow: hidden;
+  padding: 0;
+}
+
+#content-wrap {overflow: hidden; padding: 30px 0}
+#content-padding {float: left; width: 710px;}
+
+.side-bar {overflow: hidden; float: right; width: 240px;}
+
+#footer {background: #eee;}
+#footer .site-width {padding: 30px 0;}
+
+
+/* ----------------------------------------- */
+/* ------ HORIZONTAL MENU with SUBS -------- */
+/* ----------------------------------------- */
+  
+/* ------------------------ */
+/* --- essential styles --- */
+/* ------------------------ */
+.mc-dropdown {position: absolute; top: 0; left: 10px; width: 980px;}
+.mc-dropdown > ul {background: none;}
+.mc-dropdown > ul, .mc-dropdown > ul *, .mobile-menu > ul, .mobile-menu > ul * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 99;
+}
+
+.mc-dropdown > ul ul {
+  position: absolute;
+  top: -999em;
+  /* left offset of submenus need to match (see below) */
+  width: 220px;
+}
+.mc-dropdown > ul ul li {width: 100%;}
+.mc-dropdown > ul li:hover {
+  /* fixes IE7 'sticky bug' */
+  visibility: inherit;
+}
+.mc-dropdown > ul li:hover li {display: block;}
+.mc-dropdown > ul li {
+  float: left;
+  position: relative;
+  z-index: 99;
+}
+.mc-dropdown > ul a, .mc-dropdown > ul .separator {
+  display: block;
+  position: relative;
+}
+.mc-dropdown > ul li:hover ul {
+  left: 0;
+  top: 60px; /* match top ul list item height */
+  z-index: 99;
+}
+
+.mc-dropdown > ul li:hover li ul {top: -999em;}
+.mc-dropdown > ul li li:hover ul {
+  left: 220px; /* match ul width */
+  top: 0;
+}
+
+#primary-menu .resp-menu > li.turn-left ul {left: auto; right: 1px;}
+#primary-menu .resp-menu > li.turn-left li:hover ul,
+#primary-menu .resp-menu > li.third-level li:hover ul {left: auto; right: 220px;}
+
+#primary-menu .resp-menu > li.turn-left a, 
+#primary-menu .resp-menu > li.turn-left .separator,
+#primary-menu .resp-menu > li.third-level li li a, 
+#primary-menu .resp-menu > li.third-level li li .separator {text-align: right;}
+
+/* ------------------- */
+/* --- custom skin --- */
+/* ------------------- */
+
+.mc-dropdown > ul {
+  float: left;
+}
+
+/* 1st level */
+.mc-dropdown > ul > li {border-left: 1px solid #999;}
+.mc-dropdown > ul > li:first-child {border: 0; }
+.mc-dropdown > ul li > a, .mc-dropdown > ul li > .separator {
+    text-decoration:none;
+    padding: 0 20px;
+    height: 60px;
+    border: 0;
+    line-height: 60px;
+    color: white;
+}
+
+.mc-dropdown > ul > li:hover > a, .mc-dropdown > ul > li:hover > .separator {
+    background: #333;
+    background: rgba(0,0,0,0.3)
+}
+
+.mc-dropdown > ul > li.active > a, .mc-dropdown > ul > li.active > .separator {
+  
+}
+
+/* 2nd level */
+.mc-dropdown > ul li li {border-top: 1px solid #444;}
+.mc-dropdown > ul li li:first-child {border: 0;}
+.mc-dropdown > ul li li > a, .mc-dropdown > ul li li > .separator {
+    font-size: 11px;
+    height: auto;
+    line-height: 16px;
+    min-height: 16px;
+    padding: 7px 10px;
+    text-shadow: none;
+}
+.mc-dropdown > ul li li:hover > a, .mc-dropdown > ul li li:hover .separator {
+  background: #333;
+  background: rgba(0,0,0,0.3);
+}
+
+.mc-dropdown > ul li li.active > a, 
+.mc-dropdown > ul li li.active > .separator {text-decoration: underline;}
+
+
+/* ----------------------------------- */
+/* --- extra horizontal menu stuff --- */
+/* ----------------------------------- */
+
+/* --- separator style refinement --- */
+.mc-dropdown > ul li .separator {cursor: default;}
+/* this gets inherited by deeper separators - next line overrides the color for those deeper separators */
+.mc-dropdown > ul li li .separator {}
+.mc-dropdown > ul li li li .separator {color: #696969;}
+
+/* controls the auto-generated arrow markup for menu items that contain dropdowns */
+/*.sf-sub-indicator {display: none;}*/
+
+
+/***Logo***/
+.mc-logo-link {padding: 0; width: 45%;}
+.mc-logo-link img {max-width: 100%; display: block; height: auto;}
+
+/***Member Login***/
+/* --- login box (header) --- */
+
+/* the login component shares these ids and classes so we must specify */
+/* location-based styling to avoid having to reset styles below for the component */
+.mc-logo-link, .login-container {
+  width: 40%;
+  overflow: hidden;
+  padding: 20px 0;
+}
+.login-container {
+  position: absolute; 
+  top: 50%; right: 10px; 
+  height: 96px;
+  margin-top: -48px;
+  padding: 0;
+}
+.mc-login {
+  width: 95.918367346939%; 
+  padding: 8px 2.040816326531%; 
+  display: block !important;
+  background: #eee;
+  border-radius: 4px;
+  height: 80px;
+  overflow: hidden;
+  margin: 0px;
+  position: relative;
+}
+
+.mc-login h3:first-child {
+    display: none;
+}
+
+/* all inputboxes, even the checkbox which needs resetting later */
+#header #form-login .inputbox {
+    background: white;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    padding: 4px 1.086956521739%;
+    line-height: normal;
+    margin: 0px;
+    width: 96.739130434783%;
+}
+
+/* entire username section */
+#header #form-login-username {
+    width: 48.936170212766%;
+    float: left;   
+}
+/* username label */
+#header #form-login-username label {font-size: 12px; font-weight: bold;}
+/* username inputbox */
+#header #modlgn_username {}
+
+/* entire password section */
+#header #form-login-password {
+    width: 48.936170212766%;
+    float: right;
+}
+/* password label */
+#header #form-login-password label {font-size: 12px; font-weight: bold;}
+/* password inputbox */
+#header #modlgn_passwd {}
+
+/* entire remember me section */
+#header #form-login-remember {
+    clear: both;
+    padding-top: 2px;
+    position: absolute;
+    left: 2.127659574468%; bottom: 8px;
+    width: 35%;
+}
+/* remember label */
+#header #form-login-remember label {font-size: 10px;}
+/* remember checkbox */
+#header #form-login #modlgn_remember {
+  width: auto; 
+  height: auto; 
+  vertical-align: middle; 
+  border: 0; 
+  border-radius: 0; 
+  box-shadow: none; 
+  background: transparent;
+}
+
+/* login submit button */
+#header #form-login .button {
+    width: 33%;
+    cursor: pointer;
+    position: absolute;
+    right: 2.127659574468%; bottom: 8px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    background: white;
+}
+
+
+/***Login Button***/
+#header a#mcSimpleLogin {
+  background: #a4a4a4;
+  width: 164px;
+  position: absolute;
+  top: 50%;
+  right: 3.90625%; 
+  margin-top: -25px;
+  line-height: 50px;
+  height: 50px;
+  text-decoration: none;
+  color: #4A4A4A;
+  display: block;
+  padding: 0;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 2px;
+
+}
+#header a#mcSimpleLogin:after {
+  content: " \e1d5";
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#header a#mcSimpleLogin:hover {color: white;}
+
+
+/* --- site search & member (quick) search --- */
+/*
+Searches should be given a module class of mc-search.  
+The first search will be floated right. 
+The second will be floated left. 
+If there is only one search, it will be floated right.
+If you want it on the left side, add a module class of left in addition to mc-search.
+*/
+.mc-search h3 {display: none;}
+.moduletable.mc-search {width: 440px; padding: 15px 0; float: left}
+.moduletable.mc-search:first-child {float: right;}
+.moduletable.mc-search.left:first-child {float: left;}
+.moduletable.mc-search div {
+    background: white;
+    overflow: hidden;
+    border: 1px solid #bbb;
+    height: 28px;
+    border-radius: 4px;
+    position: relative;
+}
+.moduletable.mc-search .inputbox {
+    padding: 0px 0px 0px 3px;
+    margin: 5px 0px 0px;
+    border: 0;
+    width: 68%; height: 20px;
+    line-height: 20px;
+    float: left;
+    background: transparent !important; /* IE7 needs this if you don't want a background at all */
+}
+.moduletable.mc-search a {
+    display: block;
+    width: 26%; height: 20px;
+    text-align: center;
+    line-height: 20px;
+    background: #777;
+    color: white;
+    font-size: 11px;
+    border-radius: 3px;
+    position: absolute; right: 5px; top: 5px;
+    text-decoration: none;
+}
+.moduletable.mc-search a:hover {background: #333;}
+
+
+/***Sidebar Modules***/
+.moduletable ul {list-style-type: none; margin: 0; padding: 0;}
+.side-bar .moduletable {
+    overflow: auto;
+    margin-bottom: 30px;
+    background: #eee;
+    border-radius: 4px;
+    position: relative;
+    padding: 10px;
+    font-size: 13px;
+}
+
+/* use the raw module class suffix to undo the styles for ctas and other special elements */
+.side-bar .moduletable.raw {
+    background: transparent;
+    border-radius: 0;
+}
+
+.side-bar .moduletable h3:first-child {
+    font-size: 14px;
+    border-bottom: 2px solid #424242;
+    font-weight: bold;
+    border-radius: 4px 4px 0 0;
+    color: #424242;
+    margin: 0 0 10px;
+}
+
+.side-bar .moduletable.raw h3:first-child {
+    border: 0;
+    color: #204060;
+    position: static;
+}
+.side-bar h6 {overflow: hidden; margin: 0; padding: 0; line-height: auto;}
+.side-bar h6 a {
+  /* float: right; */
+  display: block;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-decoration: none;
+}
+
+/* single or multiple cta buttons */
+.moduletable.mc-button-list p {margin: 0;} /* account for accidental p's wrapped around the ul */
+.moduletable.mc-button-list ul {
+    list-style: none;
+    margin: 0;
+}
+.moduletable.mc-button-list ul li {margin-top: 2px;}
+.moduletable.mc-button-list ul li:first-child {margin: 0;}
+.moduletable.mc-button-list ul li a {
+    display: block;
+    height: auto;
+    line-height: 16px;
+    min-height: 16px;
+    padding: 7px 20px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 2px;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+
+
+/* ------------------------- */
+/* ------ SEARCH PAGE ------ */
+/* ------------------------- */
+#mc-search-form .mc-button:hover {background: #333; color: white;}
+.mc-result .highlight {background: #ff9; padding: 0px 5px;} /* text highlight on search terms in results */
+
+div#mc-search-filters {min-width: 0;}
+ul.mc-filter-fields {height: auto;}
+ul.mc-filter-fields li {line-height: 34px; }
+ul.mc-filter-fields li.mc-ordering-label {border: 0; padding: 0; margin: 0; clear: both;}
+
+.mc-button {padding-left: 1em; padding-right: 1em}
+ul#mc-search-fields li.mc-search-button {margin-left: 14px;}
+
+/****************/
+/* --- PBMC --- */
+/****************/
+#pbmc-wrap {padding: 0 0 20px; text-align: center;}
+#pbmc {font-size: 11px; line-height: 30px; height: 30px; display: block; width: 170px; margin: 0 auto; text-decoration: none !important;}
+.icon-mc-logomark:before, .icon-mc-wordmark:before {font-size: 16px; line-height: 26px; position: relative; top: 4px; left: 1px;}
+.icon-mc-wordmark:before {left: 2px;}
+.mc-brand-container {display: none;}
+#pbmc {color: rgba(0,0,0,0.3);}
+#pbmc:hover {color: #D8F0EB;}
+
+/* ----------------------------------------- */
+/* ------ LOGIN PAGE ----------------------- */
+/* ----------------------------------------- */
+/* precede with #content-padding to ensure we don't affect the login module */
+#content-padding #form-login {max-width: 500px; margin: 0 auto; position: relative; overflow: hidden;}
+#content-padding #form-login label {font-weight: bold; color: #4a4a4a;}
+#content-padding #form-login input.inputbox {
+    width: 92%;
+    border: 1px solid #c4c4c4;
+    border-radius: 3px;
+    background: white;
+    padding: 6px;
+    color: #a4a4a4;
+}
+#content-padding #form-login input.inputbox:focus {border-color: #a4a4a4; color: #4a4a4a; box-shadow: none;}
+#content-padding #form-login #form-login-remember label {font-size: 14px; font-weight: normal; color: #4a4a4a;}
+
+#content-padding #form-login #modlgn_remember {width: auto; border: 0;}
+#content-padding #form-login #modlgn_remember:focus {background: #4a4a4a; color: white; box-shadow: none;}
+
+#content-padding #form-login input.button {
+  border: 0;
+  background: #4a4a4a;
+  color: white;
+  border-radius: 3px;
+  padding: 7px;
+  width: 50%;
+
+  -webkit-appearance: none;     /* for iOS */
+  -webkit-border-radius: 3px;   /* for iOS */
+}
+
+#content-padding #form-login input.button:hover {cursor: pointer; opacity: 0.8;}
+
+#content-padding #form-login .forgot-username,
+#content-padding #form-login .forgot-password {
+  font-size: 0.8em;
+  display: inline-block;
+  margin-top: 40px;
+  float: left;
+}
+
+#content-padding #form-login .forgot-username {margin-left: 20px;}
+
+
+
+/* -------------------------------------------------- */
+/* ------ GENERAL ARTICLE STYLES -------------------- */
+/* -------------------------------------------------- */
+/* some of these styles apply to the various article-related layouts like blogs but they cascade from here */
+
+/* logged-in admin edit tooltip - this is the tooltip itself, the button is in the next section */
+div.tool-tip {z-index: 99999;}
+div.tip-top {z-index: 99999;}
+div.tip-text {
+    font-size: 11px;
+    color: #ddd;
+    background: #333;
+    border: 2px solid #555;
+    border-top-width: 1px;
+    padding: 6px 9px 9px 9px;
+    z-index: 99999;
+    box-shadow: 0px 3px 18px rgba(0,0,0,0.35);
+}
+div.tip-title {
+    font-size: 11px;
+    color: white;
+    font-weight: bold;
+    background: #333;
+    border: 2px solid #555;
+    border-bottom-width: 1px;
+    padding: 9px 9px 6px 9px;
+    z-index: 99999;
+    box-shadow: 0px 3px 18px rgba(0,0,0,0.35);
+}
+
+/* article icons, pdf, print, email */
+table.contentpaneopen td.buttonheading div.content-wrapper {width: 20px !important;}
+.buttonheading a img {display: none;}
+.buttonheading a {display: block; width: 16px; height: 16px; margin-left: 2px; opacity: 0.5;}
+.buttonheading a:hover, .buttonheading a:focus {opacity: 1;}
+.buttonheading a[title=PDF] {background: url(https://www.napractice.org/jmc-assets/icons/article-1.png) 0 -100px;}
+.buttonheading a[title=PDF]:hover {background-position: 0 0;}
+.buttonheading a[title=Print] {background: url(https://www.napractice.org/jmc-assets/icons/article-1.png) -100px -100px;}
+.buttonheading a[title=Print]:hover {background-position: -100px 0;}
+.buttonheading a[title=Email] {background: url(https://www.napractice.org/jmc-assets/icons/article-1.png) -200px -100px;}
+.buttonheading a[title=Email]:hover {background-position: -200px 0;}
+/* admin edit button */
+.buttonheading .hasTip a {background: url(https://www.napractice.org/jmc-assets/icons/article-1.png) -300px -100px;}
+.buttonheading .hasTip a:hover {background-position: -300px 0;}
+
+/* article title if enabled */
+td.contentheading {font-weight: bold; font-size: 16px;}
+td.contentheading a {}
+
+ /* written by */
+.contentpaneopen span.small {font-size: 11px; color: #666;}
+/* publish date */
+td.createdate {font-size: 11px; color: #999; height: 36px;}
+/* edit date */
+td.modifydate {font-size: 11px; color: #999;}
+
+/* 'read more' links */
+.readon {
+    display: inline-block;
+    color: white;
+    margin-top: 9px;
+    padding: 3px 9px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 12px;
+    text-shadow: 0px -1px 0px rgba(0,0,0,0.7);
+    background: #666;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.readon:hover, .readon:active {
+}
+
+/* 'more articles' list at the bottom */
+div.blog_more {margin: 18px 0;} /* entire section */
+div.blog_more strong {} /* heading */
+div.blog_more ul {margin: 0 40px 0;}
+
+/* prev and next links at the bottom of single articles */
+/* not the same as the blog - the blog nav lacks hooks to style */
+.contentpaneopen table.pagenav th {background: transparent; border: 0;} /* prev and next are both in th's */
+.contentpaneopen table.pagenav td {border: 0;} /* prevent inheritance - this td is just used for spacing */
+.contentpaneopen .pagenav a {text-decoration: none;}
+
+
+
+/* ---------------------------------------------- */
+/* ------ CATEGORY BLOG & FRONT PAGE ------------ */
+/* ---------------------------------------------- */
+
+div.componentheading {display: none}
+#community-wrap div.componentheading {display: block;}
+
+/* columned article headings */
+td.article_column td.contentheading {font-size: 14px; margin-bottom: 19px;}
+
+/* leftmost blog column */
+td.article_column {padding: 0;}
+
+/* other blog columns */
+td.article_column.column_separator {padding: 0 0 0 18px;}
+
+/* horizontal blog separators - bottom stripe on all blog articles, even lead */
+.blog span.article_separator {display: block; height: 2px; background: #ddd; margin: 18px 0;}
+/* columned blog article separators can be specified here if needed */
+.blog table span.article_separator {}
+
+
+
+/* ---------------------------------------------- */
+/* ------ CATEGORY LIST ------------------------- */
+/* ---------------------------------------------- */
+td.sectiontableheader {text-align: left; padding: 5px; width: auto;}
+td.sectiontableheader a img {margin-left: 10px; position: relative; top: 2px;}
+tr.sectiontableentry1 a, tr.sectiontableentry2 a {}
+td.contentdescription {width: 100%;} /* Needed to fill the available space in IE8 */
+
+
+
+/* ---------------------------------------------- */
+/* ------ POLL RESULTS PAGE --------------------- */
+/* ---------------------------------------------- */
+/* without #poll, some of these apply to the module also */
+#poll {width: 100%;}
+#poll #id {width: auto !important; margin: 0 0 20px 20px;}
+#poll .pollstableborder {width: 100%; border-bottom: 1px solid #ccc;}
+#poll .pollstableborder td {padding: 9px !important;}
+.pollstableborder th {padding-bottom: 18px;}
+.pollstableborder th img {display: none;}
+.pollstableborder {width: auto;}
+.smalldark {font-size: 85%;} /* info at the bottom */
+
+/* !NOTE! - multiple pages use these layout elements */
+/* changing them here will also cause changes on the CatList page */
+/* Polls use .sectiontableentry0 & 1, while CatList uses 1 & 2 */
+.sectiontableentry0 td, .sectiontableentry1 td, .sectiontableentry2 td {
+    border: 0 !important;
+    background: none !important;
+    font-size: 100% !important;
+    text-align: left !important;
+    vertical-align: middle !important;
+    padding: 9px !important;
+    font-weight: normal !important;
+}
+.sectiontableentry0 td, .sectiontableentry2 td {background: #eee !important;}
+
+
+
+/* ---------------------------------------------- */
+/* ------ ARCHIVE LIST -------------------------- */
+/* ---------------------------------------------- */
+#archive-list {margin: 18px 0 0 0;}
+#archive-list li {padding: 18px;}
+#archive-list li.row1 {}
+#archive-list li.row2 {background: #eee;}
+#archive-list h4 {}
+#archive-list .metadata {margin: 9px 0 0; font-size: 11px; font-weight: normal; color: #666;}
+#archive-list .metadata span.created-date {}
+#archive-list .metadata span.author {float: right;}
+#archive-list div.intro {margin-top: 9px;}
+
+
+
+/* ------------------------ */
+/* --- CC BOARD STYLING --- */
+/* ------------------------ */
+td.ccbheaderrow table.ccbnormaltable td {padding: 5px;} /* tds containing the menu and user info */
+td.ccbtopleftgray, td.ccbtopmiddlegray, td.ccbtoprightgray {background: #4a4a4a !important;}
+td.ccbleftbody, td.ccbheaderrow, td.ccbrightbody, td.ccbbotleft,
+td.ccbbotmiddle, td.ccbbotright, td.ccbdatacolumn, td.ccbpostarea,
+tr.ccbfrmrowheader, tr.ccbboardsummary {background: #eee !important;}
+.bbcode_quote {border-color: #ddd; background: #fff;}
+div.bbcode_quote_head {color: #aaa;}
+div.bbcode_quote_body {color: #555;}
+a.ovalbuttongray {
+  background: #4a4a4a; /* - */
+  display: block;
+  float: left;
+  font: inherit;
+  line-height: inherit; /* - */
+  height: auto; /* - */
+  color: white;
+  padding: 0 7px;
+  text-decoration: none;
+  margin-right: 10px;
+  border-radius: 3px;
+  font-size: inherit; line-height: 2em; /* - */
+  }
+a:link.ovalbuttongray {color: white;}
+a.ovalbuttongray:hover, a.ovalbuttongray:active {color: white; opacity: 0.8;}
+a.ovalbuttongray span {
+  background: none;
+  display: normal;
+  color: inherit;
+  padding: 0;
+  }
+a.ovalbuttongray:hover span {
+  color: inherit;
+  background: none;
+  }
+a.squarebutton {
+  background: #aaa; /* - */
+  display: block;
+  float: right;
+  font: inherit;
+  line-height: inherit; /* - */
+  height: auto; /* - */
+  padding: 0 7px;
+  margin-left: 4px;
+  text-decoration: none;
+  color: white;
+  }
+a:link.squarebutton {color: white;}
+a:hover.squarebutton, a:active.squarebutton {color: white; opacity: 0.7;}
+a.squarebutton span {
+  background: none;
+  display: normal;
+  color: inherit;
+  padding: 0;
+  }
+a.squarebutton:hover span {color: white; background: none;}
+
+/* --- sponsor banners --- */
+.bannergroup {width: 100%;}
+.banneritem {width: 100%;}
+.banneritem img {max-width: 100%; height: auto;}
+
+
+/* --- social network menu --- */
+.socnets {
+  overflow: hidden;
+  float: right;
+  font-size: 16px;
+}
+.socnets ul {margin: 0; padding: 0; list-style: none;}
+.socnets li {margin-left: 0.25em; float: left; list-style: none;}
+.socnets li:first-child {margin-left: 0;}
+.socnets a {
+  font-size: 1em; /* 1em is 16px for the icon-font */
+  /* just playing with basing this off the font size
+  it's pretty cool - change the font-size and these values all play nicely */
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
+  padding: 0.5em;
+  border-radius: 50%;
+  transition: 0.2s;
+  display: block;
+  color: #85A0B1;
+  text-decoration: none;
+  background: #808080;
+}
+.socnets a span {text-transform: lowercase;}
+.socnets a span {width: 1em; overflow: hidden; display: block; height: 1em;}
+.socnets a span:before {width: 1em; height: 1em; display: block}
+
+/* Social Color */
+.socnets .color li a.facebook {background: #4862A3; color: white;} /* Facebook */
+.socnets .color li a.twitter {background: #55ACEE; color: white;} /* Twitter */
+.socnets .color li a.wordpress {background: #0085BE; color: white;} /* Wordpress */
+.socnets .color li a.youtube {background: #FF2A27; color: white;} /* YouTube */
+.socnets .color li a.youtube2 {background: #FF2A27; color: white;} /* YouTube (alt logo) */
+.socnets .color li a.vimeo {background: #44BBFF; color: white;} /*Vimeo*/
+.socnets .color li a.googleplus {background: #DD4B39; color: white;} /* Google Plus */
+.socnets .color li a.instagram {background: #634D40; color: white;} /* Instagram */
+.socnets .color li a.rss {background: #FF9900; color: white;} /* Feed */
+.socnets .color li a.pinterest {background: #CB2127; color: white;} /* Pinterest */
+.socnets .color li a.flickr {background: #FE0084; color: white;} /* Flickr */
+.socnets .color li a.linkedin {background: #0077b5; color: white;} /* LinkedIn */
+.socnets .color li a.linkedin2 {background: #0077b5; color: white;} /* LinkedIn (alt logo) */
+
+/* Social Icon */
+.socnets .icon a {background: none;}
+.socnets .color.icon li a {background: none;}
+.socnets .color.icon li a.facebook {color: #4862A3;} /* Facebook */
+.socnets .color.icon li a.twitter {color: #55ACEE;} /* Twitter */
+.socnets .color.icon li a.wordpress {color: #0085BE;} /* Wordpress */
+.socnets .color.icon li a.youtube {color: #FF2A27;} /* YouTube */
+.socnets .color.icon li a.youtube2 {color: #FF2A27;} /* YouTube (alt logo) */
+.socnets .color.icon li a.vimeo {color: #44BBFF;} /*Vimeo*/
+.socnets .color.icon li a.googleplus {color: #DD4B39;} /* Google Plus */
+.socnets .color.icon li a.instagram {color: #634D40;} /* Instagram */
+.socnets .color.icon li a.rss {color: #FF9900;} /* Feed */
+.socnets .color.icon li a.pinterest {color: #CB2127;} /* Pinterest */
+.socnets .color.icon li a.flickr {color: #FE0084;} /* Flickr */
+.socnets .color.icon li a.linkedin {color: #0077b5;} /* LinkedIn */
+.socnets .color.icon li a.linkedin2 {color: #0077b5;} /* LinkedIn (alt logo) */
+
+.socnets .rounded-sq a {border-radius: 3px;}
+
+.socnets a:hover {background: #444; color: #fff;}
+
+.footer-info {float: left; max-width: 75%;}
+#footer .site-width {font-size: 12px;}
+#RTT {color: #4a4a4a; text-decoration: none; float: right; clear: right; margin-top: 30px;}
+#RTT span {font-size: 16px; position: relative; top: 3px; left: 1px}
+
+
+/* -------------------------------------------- */
+/* --- MEMBER LANDING, 'MY NAME IS' STICKER --- */
+/* -------------------------------------------- */
+#my-name-is {
+height: 262px;
+position: relative; border-radius: 4px; overflow: hidden; margin: 0 0 10px 0;
+background: url(https://www.napractice.org/templates/vinings-jt/images/my-name-is.png) right top no-repeat;/* default black suit */
+/*  background: url(/jmc-assets/misc/my-name-is-blue-polo.png) right no-repeat; /* blue polo shirt */
+/*  background: url(/jmc-assets/misc/my-name-is-female.png) right no-repeat; /* female suit */
+/*  background: url(/jmc-assets/misc/my-name-is-gray-t.png) right no-repeat; /* gray t-shirt */
+/*  background: url(/jmc-assets/misc/my-name-is-medical.png) right no-repeat; /* medical lab coat */
+/*  background: url(/jmc-assets/misc/my-name-is-tan-sweater.png) right no-repeat; /* tan sweater */
+/*  background: url(/jmc-assets/misc/my-name-is-worker.png) right no-repeat; /* general worker */
+}
+#my-name-is .info {
+  position: absolute;
+  right: 13px;
+  top: 75px;
+  width: 350px;
+  height: 120px;
+  overflow: hidden;
+  text-align: center;
+}
+#my-name-is h2 {
+  font-size: 30px; color: #fff; margin: 0;
+}
+#my-name-is h3 {
+  font-size: 16px; color: #fff; margin: 10px 0 0; line-height: 20px;
+}
+#my-name-is h4 {
+  font-size: 16px; color: #fff; margin: 0; padding: 0;
+  position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;
+}
+#my-name-is h2, #my-name-is h3, #my-name-is h4 {font-family: 'Roboto', Arial, Helvetica, sans-serif;}
+
+#profile-update-message {
+  position: absolute; left: 0px; bottom: 4px; margin: 0; padding: 5px 10px;
+  font-size: 12px; color: #999; border-radius: 0 4px 4px 0; background: rgba(0,0,0,0.8);
+}
+#profile-update-message a:link {color: white;}
+#profile-update-message a:hover, #profile-update-message a:active {color: white;}
+
+/* ----------------------------------- */
+/* --- MEMBER LANDING, QUICK LINKS --- */
+/* ----------------------------------- */
+.member-landing-quick-links {
+  border-radius: 4px;
+  margin: 0 0 10px 0; padding: 10px 5px;
+  background: #eee;
+}
+.member-landing-quick-links ul {margin: 0; padding: 0; list-style: none; overflow: hidden;}
+.member-landing-quick-links ul li {float: left; border-left: 1px solid #bbb; padding: 0px 5px;}
+.member-landing-quick-links ul li:first-child {border: 0;}
+
+
+/*Show slider only on desktop/tablet landscape***/
+.mc-home-slider {display: block;}
+#slider {border-radius: 4px; overflow: hidden;}
+/***Nivo Control Nav background***/
+#featured-content .nivo-controlNav {border-radius: 0 0 4px 4px; opacity: 0.8;}
+/**** Fix for Nivo Slider with links on the img tag in IE ****/
+.nivoSlider a.nivo-imageLink{background: white; filter: alpha(opacity=0); opacity: 0;}
+#featured-content {margin-top: 30px;}
+
+
+/* ----------------------------------------- */
+/* ------ FIXES and PREVENTIONS ------------ */
+/* ----------------------------------------- */
+
+/* its easy to end up with unwanted paragraphs after working in an online editor */
+/* zeroing out these ps helps deal with the most common occurrences of that */
+#header p {margin: 0;}
+#footer p {margin: 0;}
+
+#site-top .site-width, 
+#over-content .site-width,
+#under-content .site-width {padding: 10px; text-align: center;}
+
+#site-top .site-width *, 
+#over-content .site-width *,
+#under-content .site-width * {margin: 0; }
+
+/***Table protection**/
+.scroll-indicator .table-wrapper {
+  overflow: scroll;
+  position: relative;
+  background: white;
+  border: 1px solid #ccc;
+}
+.scroll-indicator {
+  padding-bottom: 15px;
+  background: #333 url(https://www.napractice.org/jmc-assets/misc/scroll-indicator.png) 95% bottom no-repeat;
+  position: relative;
+}
+div.table-wrapper > table {margin: 0; background: transparent;}
+div.table-wrapper table table {margin: 0}
+
+
+/* Large Image Protection */
+.img-wrapper { display: inline-block;}
+div#component-wrap img {max-width: 100%; height: auto;}
+div#component-wrap .slider-wrapper img {max-width: none;}
+
+
+/* -------------------------- */
+/* --- HOME PAGE TEMPLATE --- */
+/* -------------------------- */
+.home-template-01 {}
+.home-main {
+  border-bottom: 1px solid #a4a4a4;
+  padding-bottom: 23px;
+}
+.home-sub {
+  width: 340px;
+  float: left;
+  margin-top: 40px
+}
+.home-sub:nth-child(odd) {margin-right: 30px; clear: left;}
+
+
+
+/* ---------------------- */
+/* --- DIY H6 BUTTONS --- */
+/* ---------------------- */
+h6 a, .button-grid a {
+  background: #4a4a4a;
+  color: white;
+  font-weight: normal;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 3px;
+  display: block;
+  text-align: center;
+  max-width: 350px;
+  margin: 0 auto;
+  text-decoration: none;
+}
+.button-grid a {
+  margin: 10px auto;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+h6 a:hover, h6 a:active, .button-grid a:hover {opacity: 0.8;}
+.home-sub h6 a {max-width: none;}
+
+/* Grid Layout */
+.grid-layout, .button-grid, .mc-columns .content-wrapper {
+  -webkit-columns: 216px 3;
+  -moz-columns: 216px 3;
+  columns: 216px 3;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+  margin-bottom: 20px;
+}
+
+.grid-layout img, .mc-columns .content-wrapper img {float: left; margin: 0 10px 10px 0; display: block;}
+
+.grid-box, .button-grid p, ul.button-grid li {
+  display: inline-block; 
+  width: 100%;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  margin: 0;
+}
+
+table.grid-table td {border: 0; padding: 0;}
+blockquote.button-grid, blockquote.grid-layout {margin: 0; padding: 0; border: 0; background: none;}
+ul.button-grid, ul.button-grid li {margin: 0; list-style: none; padding: 0}
+
+
+/* Floats */ 
+.mc-image-left, .mc-image-left-large {float: left; margin: 0 13px 10px 0; clear: left;}
+.mc-image-right, .mc-image-right-large {float: right; margin: 0 0 10px 13px; clear: right;}
+
+
+/* ----------------------------------- */
+/* ------ Breakpoints----------------- */
+/* ----------------------------------- */
+
+/***Baseline is Desktop***/
+#phone-portrait, #phone-landscape, #tablet-portrait, #tablet-landscape {
+  display: none; position: absolute; top: -100%; left: -100%; height: 1px; width: 1px; background: red;
+}
+
+a.toggle-menu, a.toggle-login, a.toggle-search  {display: none}
+#tablet-landscape {display: block;}
+
+
+div.mobile-menu > ul {display: none;}
+
+/*** Hide Right ***/
+.full-width .side-bar {display: none;}
+.full-width #content-padding {width: 100%;}
+
+
+@media screen and (min-width: 1000px) {
+  .full-width .home-template-01 .home-sub {max-width: 475px; width: auto}
+  /*Search in Right bar*/
+  .side-bar .moduletable.mc-search {
+    height: auto; 
+    float: none; 
+    width: auto;
+    background: none;
+    box-shadow: none;
+    border: none;
+    padding: 0
+  } 
+  
+  .top-bar {position: absolute; top: 0; width: 100%;}
+  .header-top-bar {padding-top: 60px}
+
+}
+
+@media screen and (max-width: 1000px) {
+  a[href*="task=edit"] {display: none;} /* the front-end edit button */
+  #tablet-landscape {display: none;}
+  #tablet-portrait {display: block;}
+  #menu-container {height: 0}
+
+  /*** Responsive Menu***/
+  #menu-container {height: 0}
+  a.toggle-menu, a.toggle-login, a.toggle-search {
+    display: block; 
+    padding: 10px;  
+    text-decoration: none; 
+    border-radius: 2px; 
+    margin: 10px 0;
+    line-height: 20px;
+    float: right;
+    font-size: 13px;
+  }
+  a.toggle-menu {
+    float: left; 
+    padding: 0; 
+    text-indent: 110%; 
+    width: 32px; height: 40px; 
+    line-height: 40px;
+    padding: 0; overflow: hidden; 
+  }
+  a.toggle-menu:before {
+    text-indent: 0; 
+    display: block; 
+    height: 32px; width: 32px; 
+    font-size: 32px; 
+    color: white;
+  }
+  a.toggle-login {display: none;}
+
+  #menu-container .mc-mainmenu {float: none;}
+  .mc-dropdown > ul {display: none;}
+  div.mobile-menu > ul {width: 100%; position: absolute; top: 60px; left: 0; background: #333; z-index: 10;}
+  .mobile-menu > ul li {margin: 0; padding: 0; float: none;}
+  .mobile-menu > ul > li {border: 0; border-top: 1px solid #ccc}
+  .mobile-menu > ul li:first-child {border: 0;}
+  .mobile-menu > ul li li, .mobile-menu > ul li li li {display: none; border: none;}
+  .mobile-menu > ul li.expand > ul > li {display: block;}
+  .mobile-menu li.parent.expand a, 
+  .mobile-menu li.parent.expand .separator {border-left: 5px solid #204060;}
+  .mobile-menu > ul ul {width: 100%}
+  .mobile-menu > ul li a, .mobile-menu > ul li .separator {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: auto;
+    line-height: 16px;
+    min-height: 16px;
+    position: relative;
+    background: #333;
+    font-size: 13px;
+  }
+  .mobile-menu > ul li.expand a, .mobile-menu > ul li.expand .separator {padding-right: 60px;}
+  .mobile-menu > ul li.expand li a, .mobile-menu > ul li.expand li .separator {padding-left: 40px;}
+  .mobile-menu > ul li li.expand li a, .mobile-menu > ul li li.expand li .separator {padding-left: 60px;}
+
+  /***Expander icon***/
+  /***Left is white, center is black, right is gray***/
+  /***Top is '+' and bottom is '-'***/
+  .expander {
+    display: block;
+    height: 100%;
+    width: 40px;
+    background: url(https://www.napractice.org/templates/vinings-jt/images/expand-icon.png) left top no-repeat;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: default;
+    padding: 0;
+    margin: 0;
+  }
+
+  li.expand > .separator > .expander, 
+  li.expand > a > .expander {background-position: left bottom;}
+
+  .mc-logo-link, .login-container {
+    width: 45%;
+    overflow: hidden;
+    padding: 0;
+  }
+  .mc-logo-link {min-height: 86px; padding: 20px 0}
+
+  .login-container {right: 3.90625%; height: 86px; margin-top: -43px}
+  .mc-login {height: 70px}
+  
+  #search-container {position: relative;}
+  #search-bar {
+    padding: 10px 0; 
+    position: absolute; 
+    top: 60px; right: 0; 
+    z-index: 8; 
+    width: 100%; 
+    background: #eee;
+    background: rgba(220,220,220,0.8);
+    display: none;
+  }
+  #search-bar .moduletable {padding: 10px 0; float: none; width: 100%}
+
+  #featured-content {margin-top: 0; }
+  #featured-content .site-width {padding: 0; max-width: none;}
+  #slider {border-radius: 0;}
+
+  #content-padding, #right-bar {width: 100%; float: none;}
+  .site-width {padding: 0 3.90625%;}
+  
+  .home-sub,
+  .side-bar .moduletable {
+    width: 47.881355932203%; 
+    float: left; 
+    margin: 30px 0 0;
+    padding: 0;
+    background: none;
+  }
+  .home-sub:nth-child(odd),
+  .side-bar .moduletable:nth-child(odd) {margin-right: 4.237288135593%; clear: left;}
+
+  .side-bar .moduletable {margin-top: 30px}
+
+  #side-search {width: 100%;}
+  #side-search .moduletable {margin-right: 0; padding-bottom: 0;}
+  .moduletable.mc-search {padding: 0 1px}
+  
+  #footer .site-width {padding: 30px 3.90625%;}
+}
+
+@media screen and (max-width: 650px) {
+  #tablet-portrait {display: none;}
+  #phone-landscape {display: block;}
+  a.toggle-login {display: block;}
+
+  .mc-logo-link {min-height: 0; padding: 3.125% 0; width: 100%; }
+  .mc-logo-link img {margin: 0 auto}
+
+  .login-container {width: 100%; right: 0; top: 0; margin: 0; background: rgba(220,220,220,0.8); display: none}
+  .mc-login {background: rgba(220,220,220,0.8); border-radius: 0;}
+
+  #featured-content {display: none;}
+  
+
+  .home-sub,
+  .side-bar .moduletable {
+    width: 100%; 
+    margin-right: 0 !important; 
+    float: none; 
+    padding-bottom: 0;
+    margin: 30px 0 0;
+    border: 0;
+  }
+  .home-main {margin: 0}
+
+  #side-search .moduletable {float: none; width: auto}
+
+  .footer-info, #RTT {float: none; max-width: none;}
+  #footer {text-align: center;}
+
+  .socnets {margin: 20px auto; float: none;}
+  .socnets li {float: none; display: inline-block;}
+  
+  #content-wrap {padding: 3.125% 0}
+  .site-width {padding: 0 3.125%}
+  #footer .site-width {padding: 3.125%}
+
+  .side-bar .moduletable {height: auto}
+
+  /***Member Landing Page***/
+  #profile-update-message {
+    width: 97%; 
+    border-radius: 4px;
+    bottom: -32px;
+    padding-left: 1.5%; padding-right: 1.5%;
+  }
+  #bkg #my-name-is {
+    background-image: none;
+    background-position: center 20px;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+    padding-top: 20px;
+    height: auto;
+    padding-bottom: 20px;
+    margin-bottom: 36px;
+    overflow: visible;
+  }
+  #my-name-is .info {
+    width: auto;
+    /* background: white; */
+    position: static;
+    text-align: center;
+    height: auto;
+    padding-top: 5px;
+    border: 1px solid #204060;
+  }
+  #my-name-is h3 {margin-bottom: 20px;}
+  #my-name-is h4 {position: relative; margin-bottom: 5px;}
+  .member-landing-quick-links ul li {border: 0;}
+
+  #header a#mcSimpleLogin:after {display: none;}
+  #header a#mcSimpleLogin {
+    font-size: 100%;    
+    top: -50px; 
+    right: 3.125%; 
+    height: 40px; 
+    line-height: 40px;  
+    margin: 0; 
+    width: auto;
+    padding: 0 10px;
+    background: white !important; 
+    color: #77C47C  !important;
+  }
+
+  /* Fix for filter box in Category List layout */
+  table.contentpane td input.inputbox[name="filter"] {width: 40%} 
+
+  .mc-image-left, .mc-image-right {max-width: 40% !important;}
+  .mc-image-left-large, .mc-image-right-large {display: block; float: none; margin: 10px 0;}
+}
+
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* ^^^^^^^^^^^ PLEASE DON'T EDIT ANYTHING ABOVE THIS LINE WITHOUT TALKING TO KS or BG ^^^^^^^^^^^ */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* vvvvvvvvvvv            STYLING AND COLOR CHANGES CAN ALL BE FOUND BELOW            vvvvvvvvvvv */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+
+
+
+/* GLOBAL COLOR 1 - often these items can be the same color
+-------------------------------------------------- */
+a                                   {color: #242559;}
+.mc-button-list li a                {background-color: #77C47C;}
+#header a#mcSimpleLogin             {background: #77C47C; color: white;}
+.side-bar a#mcSimpleLogin           {background-color: #77C47C; color: #fff;}
+.mc-search a.button.mc-search       {background-color: #77C47C; color: #fff;}
+
+h6 a, .button-grid a                {background-color: #77C47C;}
+
+
+h1                                  {color: #242559;}
+h2                                  {color: #77C47C;}
+
+.home-main                          {border-color: #EEE;}
+
+/* BUTTON HOVER COLOR - often these can be the same color
+-------------------------------------------------- */
+.mc-button-list li a:hover            {background-color: #4a4a4a;}
+.side-bar a#mcSimpleLogin:hover       {background-color: #4a4a4a; color: #fff;}
+.mc-search a.button.mc-search:hover   {background-color: #4a4a4a; color: #fff;}
+
+/* MOBILE BUTTON COLOR - these should be the same color
+-------------------------------------------------- */
+a.toggle-login, a.toggle-search   {background: white; color: #77C47C;}
+a.toggle-menu:before              {color: white;}
+
+/* color and background for PHONE logout button needs to be set in the last line of the phone breakpoint */
+
+
+
+
+
+/* MAIN MENU - bar color - & search bar & footer & my-name is sub-menu left border & socnets
+-------------------------------------------------- */
+#menu-container, #menu-button               {background-color: #242559;}
+#search-container                           {background-color: #242559;}
+#footer                                     {background-color: #242559;}
+#my-name-is                                 {background-color: #242559;}
+#my-name-is .info                           {border-color: #242559;}
+.mobile-menu li.parent.expand a, 
+.mobile-menu li.parent.expand .separator    {border-left: 5px solid #242559;}
+.socnets a                                  {color: #242559;}
+#footer .socnets a:hover                    {color: #242559; background: #fff}
+
+/* MAIN MENU - top level hover & second level static color - usually the same color
+-------------------------------------------------- */
+.mc-dropdown > ul > li:hover > a, 
+.mc-dropdown > ul > li:hover > .separator   {background: #383A6E;} /* top level hover */
+.mc-dropdown > ul li li > a, 
+.mc-dropdown > ul li li > .separator        {background: #383A6E;} /* second level */
+
+/* MAIN MENU - second level hover & third level static color - usually the same color
+-------------------------------------------------- */
+.mc-dropdown > ul li li:hover > a, 
+.mc-dropdown > ul li li:hover > .separator  {background: #323361;} /* second level hover */
+.mc-dropdown > ul li li li a, 
+.mc-dropdown > ul li li li .separator       {background: #383A6E;} /* third level static */
+
+/* MAIN MENU - static text color & hover text color - often you can leave these alone
+-------------------------------------------------- */
+.mc-dropdown > ul li > a, 
+.mc-dropdown > ul li > .separator         {color: white;} /* static text color */
+.mc-dropdown > ul li:hover > a, 
+.mc-dropdown > ul li:hover > .separator   {color: white;} /* hover text color */
+
+/* MAIN MENU - border color - often you can leave these alone
+-------------------------------------------------- */
+.mc-dropdown ul li        {border-color: #fff;} /* top level */
+.mc-dropdown ul li li     {border-color: #fff;}
+
+/* RESP MENU - background color - often you can leave these alone
+-------------------------------------------------- */
+div.mobile-menu > ul                              {background: #333;}
+.mobile-menu > ul li a, 
+.mobile-menu > ul li .separator                   {background: #333;}
+.mobile-menu > ul li li.parent.expand a, 
+.mobile-menu > ul li li.parent.expand .separator  {background: #222;}
+
+
+
+/* FOOTER/FOOTER TEXT COLOR
+-------------------------------------------------- */
+#footer       {color: #fff;}
+#pbmc         {color: #FFF;}
+#pbmc:hover         {color: #FFF;}
+.socnets a    {background-color: #FFF;}
+.socnets a:hover    {background-color: #FFF;}
+#RTT          {color: #FFF;}
+#RTT span           {color: #FFF;}
+#RTT:hover          {color: #FFF;}
+.moduletable.mc-footer-info a {color: #FFF;}
+
+
+
+/* HIDING SEARCH ON MY PROFILE PAGE
+--------------------------------------------------------------------------------------------- */
+#community-wrap .cToolbar#cToolbarNav ul#cToolbarNavList li#toolbar-item-search {display: none;}
+
+
+
+
+
+/* CALENDAR STYLES
+-------------------------------------------------- */
+.mc-event-details .event-time-separator {
+    display: none;
+}
+.mc-event-details .event-time-separator.dash {
+    display: inline;
+}
+.mc-event-details .event-start-date:after,
+.mc-event-details .event-stop-date:after {
+    content: '';
+    display: block
+}
+
+li.ev_td_li .event-list-item {margin: 10px 0}
+
+
+/* THE END...
+-------------------------------------------------- */
