@@ -1,30 +1,55 @@
-HTTrack3.49-2+htsswf+htsjava launched on Sat, 11 Sep 2021 12:11:12 at https://voices.uchicago.edu/ignite +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
-(winhttrack -qir2%e3C2%nt%Ps0u1%uN100%I0p3BaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://voices.uchicago.edu/ignite -O1 "C:\My Web Sites\Ignite Website" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+HTTrack3.49-2+htsswf+htsjava launched on Sun, 05 Dec 2021 23:26:21 at https://voices.uchicago.edu/ignite/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps0u1%s%uN100%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://voices.uchicago.edu/ignite/ -O1 "C:\My Web Sites\Ignite Website" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
 
 Information, Warnings and Errors reported for this mirror:
 note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
 	such as username/password authentication for websites mirrored in this project
 	do not share these files/folders if you want these information to remain private
 
-12:11:21	Error: 	"Forbidden" (403) at link https://voices.uchicago.edu/ignite/xmlrpc.php (from https://voices.uchicago.edu/ignite/)
-12:11:31	Error: 	"Forbidden" (403) at link https://voices.uchicago.edu/ignite/xmlrpc.php?rsd (from https://voices.uchicago.edu/ignite/)
-12:11:31	Error: 	"Not Found" (404) at link https://voices.uchicago.edu/ignite/POST (from https://voices.uchicago.edu/ignite/)
-12:11:31	Error: 	"Bad Request" (400) at link https://voices.uchicago.edu/ignite/wp-admin/admin-ajax.php (from https://voices.uchicago.edu/ignite/)
-12:11:31	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/files/2021/01/ignite_logo-no-tl-glow.png (from https://voices.uchicago.edu/ignite/)
-12:11:31	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/files/2021/01/MD-in-Room-AIQ1.jpg (from https://voices.uchicago.edu/ignite/)
-12:11:32	Warning: 	Retry after error -4 (No data (connection closed)) at link https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/e/2936/files/2021/01/IGNITE-MDR-Badgecard-front.png (from https://voices.uchicago.edu/ignite/)
-12:11:32	Warning: 	Retry after error -4 (No data (connection closed)) at link https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/e/2936/files/2021/01/IGNITE-icon.png (from https://voices.uchicago.edu/ignite/)
-12:11:34	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/wp-content/themes/divi/js/custom.js?ver=4.9.6 (from https://voices.uchicago.edu/ignite/)
-12:11:35	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/wp-content/themes/divi/includes/builder/scripts/ext/jquery.fitvids.js?ver=4.9.6 (from https://voices.uchicago.edu/ignite/)
-12:11:36	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/wp-content/themes/divi/includes/builder/scripts/ext/waypoints.min.js?ver=4.9.6 (from https://voices.uchicago.edu/ignite/)
-12:11:37	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/wp-includes/js/wp-embed.min.js?ver=5.7.2 (from https://voices.uchicago.edu/ignite/)
-12:11:37	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/files/2021/01/ignite_logo-no-tl-glow.png (from https://voices.uchicago.edu/ignite/)
-12:11:38	Warning: 	Found for https://voices.uchicago.edu/ignite/files/2021/01/MD-in-Room-AIQ1.jpg
-12:11:38	Warning: 	File has moved from https://voices.uchicago.edu/ignite/files/2021/01/MD-in-Room-AIQ1.jpg to https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/e/2936/files/2021/01/MD-in-Room-AIQ1.jpg
-12:11:38	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/wp-content/themes/divi/js/custom.js?ver=4.9.6 (from https://voices.uchicago.edu/ignite/)
-12:11:38	Warning: 	Found for https://voices.uchicago.edu/ignite/files/2021/01/ignite_logo-no-tl-glow.png
-12:11:38	Warning: 	File has moved from https://voices.uchicago.edu/ignite/files/2021/01/ignite_logo-no-tl-glow.png to https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/e/2936/files/2021/01/ignite_logo-no-tl-glow.png
-12:11:38	Error: 	"No data (connection closed)" (-4) after 2 retries at link https://voices.uchicago.edu/ignite/wp-content/themes/divi/js/custom.js?ver=4.9.6 (from https://voices.uchicago.edu/ignite/)
+23:26:28	Error: 	"Forbidden" (403) at link https://voices.uchicago.edu/ignite/xmlrpc.php (from https://voices.uchicago.edu/ignite/)
+23:26:39	Error: 	"Forbidden" (403) at link https://voices.uchicago.edu/ignite/xmlrpc.php?rsd (from https://voices.uchicago.edu/ignite/)
+23:26:39	Error: 	"Not Found" (404) at link https://voices.uchicago.edu/ignite/POST (from https://voices.uchicago.edu/ignite/)
+23:26:39	Error: 	"Bad Request" (400) at link https://voices.uchicago.edu/ignite/wp-admin/admin-ajax.php (from https://voices.uchicago.edu/ignite/)
+23:26:46	Warning: 	Retry after error -4 (No data (connection closed)) at link https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/e/2936/files/2021/01/ignite_logo-no-tl-glow.png (from https://voices.uchicago.edu/ignite/)
+23:26:48	Warning: 	Retry after error -4 (No data (connection closed)) at link https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/e/2936/files/2021/01/MD-in-Room-AIQ1.jpg (from https://voices.uchicago.edu/ignite/)
+23:26:48	Warning: 	Retry after error -4 (No data (connection closed)) at link https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/e/2936/files/2021/01/IGNITE-MDR-Badgecard-front.png (from https://voices.uchicago.edu/ignite/)
+23:26:56	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/wp-content/themes/divi/core/admin/fonts/modules/all/modules.eot (from https://voices.uchicago.edu/ignite/wp-content/themes/divi/style-static.min.css?ver=4.10.5)
+23:26:56	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/wp-content/themes/divi/core/admin/fonts/modules/all/modules.eot? (from https://voices.uchicago.edu/ignite/wp-content/themes/divi/style-static.min.css?ver=4.10.5)
+23:26:56	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/wp-content/themes/divi/core/admin/fonts/modules/all/modules.svg (from https://voices.uchicago.edu/ignite/wp-content/themes/divi/style-static.min.css?ver=4.10.5)
+23:26:59	Error: 	"Not Found" (404) at link https://voices.uchicago.edu/ignite/wp-content/themes/divi/includes/builder/images/subscribe-loader.gif (from https://voices.uchicago.edu/ignite/wp-content/themes/divi/style-static.min.css?ver=4.10.5)
+23:26:59	Warning: 	Moved Permanently for https://voices.uchicago.edu/ignite/?p=145
+23:26:59	Warning: 	File has moved from https://voices.uchicago.edu/ignite/?p=145 to https://voices.uchicago.edu/ignite/staff-directory/
+23:26:59	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvoices.uchicago.edu%2Fignite%2Fstaff-directory%2F (from https://voices.uchicago.edu/ignite/staff-directory/)
+23:26:59	Error: 	"Not Found" (404) at link https://voices.uchicago.edu/ignite/staff-directory/POST (from https://voices.uchicago.edu/ignite/staff-directory/)
+23:26:59	Warning: 	Retry after error -4 (No data (connection closed)) at link https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/e/2936/files/2016/12/uchicago5-1j24xj4.jpg (from https://voices.uchicago.edu/ignite/staff-directory/)
+23:26:59	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/?p=186 (from https://voices.uchicago.edu/ignite/contact-us/)
+23:26:59	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/contact-us/POST (from https://voices.uchicago.edu/ignite/contact-us/)
+23:27:00	Warning: 	Moved Permanently for https://voices.uchicago.edu/ignite/?p=101
+23:27:00	Warning: 	File has moved from https://voices.uchicago.edu/ignite/?p=101 to https://voices.uchicago.edu/ignite/our-program/
+23:27:00	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/our-program/POST (from https://voices.uchicago.edu/ignite/our-program/)
+23:27:00	Error: 	"Forbidden" (403) at link https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/e/2936/files/2016/10/logo.rgb_.maroon-22x93zk.png (from https://voices.uchicago.edu/ignite/our-program/)
+23:27:00	Error: 	"Forbidden" (403) at link https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/e/2936/files/2016/10/logo.rgb_.maroon-22x93zk-300x60.png (from https://voices.uchicago.edu/ignite/our-program/)
+23:27:00	Error: 	"Forbidden" (403) at link https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/e/2936/files/2016/10/header_uchicago_03-20bbyar.jpg (from https://voices.uchicago.edu/ignite/our-program/)
+23:27:00	Error: 	"Forbidden" (403) at link https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/e/2936/files/2016/10/header_uchicago_03-20bbyar-300x169.jpg (from https://voices.uchicago.edu/ignite/our-program/)
+23:27:00	Error: 	"Forbidden" (403) at link https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/e/2936/files/2016/10/header_chicago_08-141sf3y-300x169.jpg (from https://voices.uchicago.edu/ignite/our-program/)
+23:27:00	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/files/2016/10/header_chicago_03-1aherg8.jpg (from https://voices.uchicago.edu/ignite/our-program/)
+23:27:03	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/files/2016/10/header_chicago_03-1aherg8-300x169.jpg (from https://voices.uchicago.edu/ignite/our-program/)
+23:27:03	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/files/2016/10/meb-headshot-1t43a35-1jp3kj2.jpg (from https://voices.uchicago.edu/ignite/our-program/)
+23:27:04	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvoices.uchicago.edu%2Fignite%2Fstaff-directory%2F (from https://voices.uchicago.edu/ignite/staff-directory/)
+23:27:04	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/?p=186 (from https://voices.uchicago.edu/ignite/contact-us/)
+23:27:04	Error: 	"Not Found" (404) at link https://voices.uchicago.edu/ignite/contact-us/POST (from https://voices.uchicago.edu/ignite/contact-us/)
+23:27:04	Error: 	"Not Found" (404) at link https://voices.uchicago.edu/ignite/our-program/POST (from https://voices.uchicago.edu/ignite/our-program/)
+23:27:04	Warning: 	Found for https://voices.uchicago.edu/ignite/files/2016/10/header_chicago_03-1aherg8.jpg
+23:27:04	Warning: 	Warning moved treated for https://voices.uchicago.edu/ignite/files/2016/10/header_chicago_03-1aherg8.jpg (real one is https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/e/2936/files/2016/10/header_chicago_03-1aherg8.jpg)
+23:27:04	Warning: 	Retry after error -4 (No data (connection closed)) at link https://voices.uchicago.edu/ignite/files/2016/10/header_chicago_03-1aherg8-300x169.jpg (from https://voices.uchicago.edu/ignite/our-program/)
+23:27:04	Warning: 	Found for https://voices.uchicago.edu/ignite/files/2016/10/meb-headshot-1t43a35-1jp3kj2.jpg
+23:27:04	Warning: 	Warning moved treated for https://voices.uchicago.edu/ignite/files/2016/10/meb-headshot-1t43a35-1jp3kj2.jpg (real one is https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/e/2936/files/2016/10/meb-headshot-1t43a35-1jp3kj2.jpg)
+23:27:04	Error: 	"No data (connection closed)" (-4) after 2 retries at link https://voices.uchicago.edu/ignite/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvoices.uchicago.edu%2Fignite%2Fstaff-directory%2F (from https://voices.uchicago.edu/ignite/staff-directory/)
+23:27:04	Error: 	"No data (connection closed)" (-4) after 2 retries at link https://voices.uchicago.edu/ignite/?p=186 (from https://voices.uchicago.edu/ignite/contact-us/)
+23:27:04	Warning: 	Retry after error -4 (No data (connection closed)) at link https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/e/2936/files/2016/10/header_chicago_03-1aherg8.jpg (from https://voices.uchicago.edu/ignite/our-program/)
+23:27:04	Warning: 	Found for https://voices.uchicago.edu/ignite/files/2016/10/header_chicago_03-1aherg8-300x169.jpg
+23:27:04	Warning: 	Warning moved treated for https://voices.uchicago.edu/ignite/files/2016/10/header_chicago_03-1aherg8-300x169.jpg (real one is https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/e/2936/files/2016/10/header_chicago_03-1aherg8-300x169.jpg)
+23:27:05	Error: 	"Forbidden" (403) at link https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/e/2936/files/2016/10/header_chicago_03-1aherg8-300x169.jpg (from https://voices.uchicago.edu/ignite/our-program/)
 
-HTTrack Website Copier/3.49-2 mirror complete in 26 seconds : 62 links scanned, 45 files written (3175739 bytes overall), 11 files updated [302813 bytes received at 11646 bytes/sec], 431142 bytes transferred using HTTP compression in 9 files, ratio 22%, 2.6 requests per connection
-(5 errors, 14 warnings, 0 messages)
+HTTrack Website Copier/3.49-2 mirror complete in 44 seconds : 102 links scanned, 63 files written (5708887 bytes overall), 14 files updated [447277 bytes received at 10165 bytes/sec], 486470 bytes transferred using HTTP compression in 17 files, ratio 20%, 3.5 requests per connection
+(16 errors, 28 warnings, 0 messages)
